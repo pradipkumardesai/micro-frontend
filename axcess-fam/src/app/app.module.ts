@@ -27,6 +27,7 @@ export class AppModule {
   ngDoBootstrap() {
     console.log(`In the Angular7 ngDoBootstrap`);
     const appElement = createCustomElement(AppComponent, { injector: this.injector})
+    if(!customElements.get('axcess-fam'))
     customElements.define('axcess-fam', appElement);   
   }
 

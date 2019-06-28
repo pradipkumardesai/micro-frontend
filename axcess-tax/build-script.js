@@ -4,14 +4,13 @@ const concat = require('concat');
 (async function build() {
 
     const files = [
-        './dist/wk-admin-manager/runtime.js',
-        './dist/wk-admin-manager/polyfills.js',
-        './dist/wk-admin-manager/main.js'
+        './dist/axcess-tax/runtime.js',
+        './dist/axcess-tax/main.js'
     ]
 
     await fs.ensureDir('angularElements')
 
-    await concat(files, 'angularElements/wk-component.js')
+    await concat(files, 'angularElements/axcess-tax.all.js')
     console.info('Angular Elements created successfully!')
 
 })()

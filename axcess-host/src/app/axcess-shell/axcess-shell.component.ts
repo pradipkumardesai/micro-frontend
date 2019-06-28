@@ -33,11 +33,11 @@ export class AxcessShellComponent implements OnInit {
   }
 
   loadAdminMnager(){
-    this.load("http://localhost/wk-admin-manager/axcess-fam-main.js",'content',"axcess-fam");
+    this.load("http://localhost/wk-admin-manager/axcess-fam.all.js",'content',"axcess-fam");
   }
 
   loadTax(){
-    this.load("http://localhost/wk-tax/wk-tax.js",'content1',"axcess-tax");
+    this.load("http://localhost/wk-tax/axcess-tax.all.js",'content1',"axcess-tax");
   }
 
   load(url:string,dvName:string,elName:string): void {//axcess-tax

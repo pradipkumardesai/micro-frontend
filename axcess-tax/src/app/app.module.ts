@@ -27,6 +27,7 @@ export class AppModule {
   ngDoBootstrap() {
     console.log(`In Tax ngDoBootstrap`);
     const appElement = createCustomElement(AppComponentTax, { injector: this.injector})
+    if(!customElements.get('axcess-tax'))
     customElements.define('axcess-tax', appElement);   
   }
 
