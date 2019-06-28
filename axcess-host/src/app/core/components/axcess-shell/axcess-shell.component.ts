@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { ElementLoaderService } from '../../services/element-loader/element-loader.service';
 
 @Component({
   selector: 'app-axcess-shell',
@@ -7,56 +8,36 @@ import { ActivatedRoute, Route } from '@angular/router';
   styleUrls: ['./axcess-shell.component.scss']
 })
 export class AxcessShellComponent implements OnInit {
-  ngOnInit(): void {
-
-    this.activatedRoute.params.subscribe((param)=>{
-      console.log(JSON.stringify(param.id));
-      switch (param.id) {
-        case "tax":
-          this.loadTax();
-          break;
-          case "am":
-          this.loadAdminMnager();
-            break;
-        default:
-          break;
-      }
-    });
-    //let modId=this.activatedRoute.snapshot.params["id"];
-
-    
-  }
   title = 'axcess-host';
 
-  constructor(private activatedRoute:ActivatedRoute){
-    
+  constructor(private activatedRoute: ActivatedRoute, private elementLoaderService: ElementLoaderService) { }
+
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe((param) => {
+      this.loadElement(param.id);
+    });
   }
 
-  loadAdminMnager(){
-    this.load("http://localhost/wk-admin-manager/axcess-fam.all.js",'content',"axcess-fam");
+  loadElement(paramId: string) {
+    switch (paramId) {
+      case "tax":
+        this.loadTax();
+        break;
+      case "am":
+        this.loadAdminMnager();
+        break;
+      default:
+        console.log("Invalid module");
+        break;
+    }
   }
 
-  loadTax(){
-    this.load("http://localhost/wk-tax/axcess-tax.all.js",'content1',"axcess-tax");
+  loadAdminMnager() {
+    this.elementLoaderService.load("http://localhost/wk-admin-manager/axcess-fam.all.js", 'content', "axcess-fam");
   }
 
-  load(url:string,dvName:string,elName:string): void {//axcess-tax
-  
-    const content = document.getElementById(dvName);
-    const script = document.createElement('script');
-    script.src = url;
-    script.onload = this.onScriptLoaded;
-
-    content.appendChild(script);
-    const webAppElement: HTMLElement = document.createElement(elName);
-    content.appendChild(webAppElement);
-    webAppElement.setAttribute('state', 'init');
+  loadTax() {
+    this.elementLoaderService.load("http://localhost/wk-tax/axcess-tax.all.js", 'content1', "axcess-tax");
   }
-
-  onScriptLoaded()
-  {
-    eval('delete window.webpackJsonp');    
-    console.log('loader false');
-  } 
 
 }
