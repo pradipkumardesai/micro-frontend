@@ -1,24 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { AxcessShellComponent } from './axcess-shell/axcess-shell.component';
-import { Routes, RouterModule } from '@angular/router';
-
-const routes:Routes=[
-  { path:":id", component:AxcessShellComponent},
-  {path:"**", redirectTo:"/am"}
-];
-
+import { CoreModule } from './core/core.module';
+import { routes } from './app.route.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AxcessShellComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],
