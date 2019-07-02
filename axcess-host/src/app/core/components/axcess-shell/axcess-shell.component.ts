@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ElementLoaderService } from '../../services/element-loader/element-loader.service';
+import { AppsConfigService } from '../../services/apps-config/apps-config.service';
+
 
 @Component({
   selector: 'app-axcess-shell',
@@ -10,34 +12,12 @@ import { ElementLoaderService } from '../../services/element-loader/element-load
 export class AxcessShellComponent implements OnInit {
   title = 'axcess-host';
 
-  constructor(private activatedRoute: ActivatedRoute, private elementLoaderService: ElementLoaderService) { }
+  constructor(private activatedRoute: ActivatedRoute, private elementLoaderService: ElementLoaderService, private appsConfigService: AppsConfigService) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((param) => {
-      this.loadElement(param.id);
+      this.appsConfigService.loadModule(param.id);
     });
-  }
-
-  loadElement(paramId: string) {
-    switch (paramId) {
-      case "tax":
-        this.loadTax();
-        break;
-      case "am":
-        this.loadAdminMnager();
-        break;
-      default:
-        console.log("Invalid module");
-        break;
-    }
-  }
-
-  loadAdminMnager() {
-    this.elementLoaderService.load("http://localhost/wk-admin-manager/axcess-fam.all.js", 'content', "axcess-fam");
-  }
-
-  loadTax() {
-    this.elementLoaderService.load("http://localhost/wk-tax/axcess-tax.all.js", 'content1', "axcess-tax");
   }
 
 }
