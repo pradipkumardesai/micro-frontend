@@ -7,8 +7,7 @@ export class ElementLoaderService {
 
   constructor() { }
 
-  load(url: string, dvName: string, elName: string): void {//axcess-tax
-
+  load(url: string, dvName: string, elName: string): void {
     const content = document.getElementById(dvName);
     this.clearInnerHTML(content);
     const script = document.createElement('script');

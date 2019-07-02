@@ -2,11 +2,13 @@
     {
         "moduleName": "am",
         "url": "http://localhost/wk-admin-manager/axcess-fam.all.js",
-        "elementName": "axcess-fam"
+        "elementName": "axcess-fam",
+        "allowed": true
     },
     {
         "moduleName": "tax",
         "url": "http://localhost/wk-tax/axcess-tax.all.js",
-        "elementName": "axcess-tax"
+        "elementName": "axcess-tax",
+        "allowed": false
     }
 ]
