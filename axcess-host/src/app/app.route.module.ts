@@ -8,7 +8,6 @@ import { UnauthorizedUserComponent } from './shared/components/unauthorized-user
 export const routes: Routes = [
     { path: "invalidreq", component: PageNotFoundComponent },
     { path: "unauth", component: UnauthorizedUserComponent },
-    { path: ":id", component: AxcessShellComponent, canActivate: [AuthGuard] },
-   
+    { path: ":id", component: AxcessShellComponent, canActivate: [AuthGuard] },   
     { path: "**", redirectTo: "/am" }
 ];

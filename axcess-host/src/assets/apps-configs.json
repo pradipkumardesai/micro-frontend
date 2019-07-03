@@ -10,5 +10,11 @@
         "url": "http://localhost/wk-tax/axcess-tax.all.js",
         "elementName": "axcess-tax",
         "allowed": false
+    },
+    {
+        "moduleName": "login",
+        "url": "http://localhost/axcess-identity/axcess-identity.all.js",
+        "elementName": "axcess-identity",
+        "allowed": true
     }
 ]

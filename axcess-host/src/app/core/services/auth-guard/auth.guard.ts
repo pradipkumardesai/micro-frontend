@@ -9,15 +9,16 @@ export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) { }
 
   canActivate(
+    
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
     let url: string = state.url;
     let hasPerm: boolean = this.authService.hasPermission(url);
-    
+    debugger;
     if (hasPerm)
       return true;
     else{
-      this.router.navigate(['/unauth']);
+      this.router.navigate(['/',"login"]);
       return false;
     }
      
