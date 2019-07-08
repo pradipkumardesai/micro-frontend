@@ -1,27 +1,32 @@
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { ShellConfigService } from 'src/app/core/services/shell-config/shell-config.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private cookieService: CookieService) { }
+  private AUTH_ID: string;
 
-  isActive(): boolean {
-    let autId: string = this.cookieService.get("AuthID")
+  constructor(private cookieService: CookieService, private shellConfigService: ShellConfigService) {
+    this.AUTH_ID = this.shellConfigService.getAuthCookieName();
+  }
+
+  isLoggedIn(): boolean {
+    let autId: string = this.cookieService.get(this.AUTH_ID)
     if (autId)
       return true;
     else
       return false;
   }
 
-  setAuthCookie(authToken: string) {
-    this.cookieService.set("AuthID", authToken);
+  login(authToken: string) {
+    this.cookieService.set(this.AUTH_ID, authToken);
   }
 
-  doLogout(){
-    this.cookieService.delete("AuthID");
-    window.location.href="http://localhost:4201/";
+  logout() {
+    this.cookieService.delete(this.AUTH_ID);
+    window.location.href = this.shellConfigService.getAuthServerURL();;
   }
 }

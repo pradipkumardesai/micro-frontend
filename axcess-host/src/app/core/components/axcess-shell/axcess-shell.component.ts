@@ -16,15 +16,14 @@ export class AxcessShellComponent implements OnInit {
 
   constructor(private authService:AuthService,private cookieService: CookieService, private activatedRoute: ActivatedRoute, private elementLoaderService: ElementLoaderService, private appsConfigService: AppsConfigService) { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {    
     this.activatedRoute.params.subscribe((param) => {
       this.appsConfigService.loadModule(param.id);
     });
   }
 
   doLogout() {
-    this.authService.doLogout();
+    this.authService.logout();
   }
 
 }
