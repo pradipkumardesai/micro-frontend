@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 
 import modules from "../../../../assets/apps-configs.json";
-import { Module } from '../../models/module.model.js';
+import { Module } from 'src/app/core/models/module.model.js';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthorizationService {
 
   constructor() { }
 

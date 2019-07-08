@@ -1,24 +1,25 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
-import { AuthService } from '../auth-service/auth.service';
+import { AuthorizationService } from '../service/authorization.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanActivate {
-  constructor(private authService: AuthService, private router: Router) { }
+export class AuthorizationGuard implements CanActivate {
 
-  canActivate(
-    
+  constructor(private authService: AuthorizationService, private router: Router) { }
+
+  canActivate(    
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
+        
     let url: string = state.url;
     let hasPerm: boolean = this.authService.hasPermission(url);
-    debugger;
+   
     if (hasPerm)
       return true;
     else{
-      this.router.navigate(['/',"login"]);
+      this.router.navigate(['/unauth']);
       return false;
     }
      

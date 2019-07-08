@@ -4,15 +4,17 @@ import { createCustomElement } from '@angular/elements';
 import { RouterModule, Route } from "@angular/router";
 
 import { AppComponent } from './app.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([])
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   entryComponents: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
