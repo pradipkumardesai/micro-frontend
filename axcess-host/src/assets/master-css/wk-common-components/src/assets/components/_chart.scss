@@ -1,0 +1,123 @@
+#chart {
+    height: 360px;
+    margin: 0 auto;
+    position: relative;
+    width: 360px;
+    margin-bottom: 20px;
+
+    span.status-text {
+        position: absolute;
+        width: 150px;
+        font-size: 20px;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #chart {
+        height: 250px;
+        width: 250px;
+
+        span.status-text {
+            font-size: 16px;
+        }
+    }
+
+    .refund-text {
+        font-size: 17px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #chart {
+        height: 210px;
+        width: 210px;
+
+        span.status-text {
+            font-size: 13px;
+            width: 100px;
+        }
+    }
+
+    .refund-text {
+        font-size: 17px;
+        text-align: center;
+    }
+}
+
+.activity-list {
+    position: relative;
+    list-style: none;
+    margin: 0 15px;
+    padding: 0;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: calc(100% - 50px);
+        top: 25px;
+        left: 1px;
+        background: #3f3f3f;
+    }
+
+    .activity-list-item {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 30px;
+
+        &:first-child {
+            margin-top: 30px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            width: 25px;
+            height: 25px;
+            background: #3f3f3f;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            z-index: 99;
+        }
+
+        &:before {
+            content: attr(data-activity-date);
+            position: absolute;
+            top: -20px;
+            font-size: 12px;
+            color: #afafaf;
+        }
+
+        .activity-item-text {
+            display: block;
+            padding: 10px;
+            background: #ececec;
+        }
+    }
+}
+
+.recent-activity-calender {
+    font-size: 25px;
+    color: #007ac3;
+}
+
+.recent-activity-text {
+    font-weight: 400;
+}
+
+.refund-text {
+    margin-bottom: 20px;
+    color: #757575;
+    text-align: center;
+}
+
+.activity-text-color {
+    color: rgb(133, 188, 32)
+}

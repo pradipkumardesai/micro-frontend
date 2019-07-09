@@ -1,0 +1,47 @@
+.dropup .dropdown-toggle::after,
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-light>a {
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $wk-secondary-green !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+  }
+
+  &.disabled {
+    color: $wk-primary-gray-tint4 !important;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-menu {
+  cursor: pointer !important;
+}
+
+.drop-up {
+  .dropdown-menu {
+    left: auto !important;
+  }
+}
+
+.dropdown-light-color {
+  color: $wk-primary-blue !important;
+}
+
+.dropdown-light-margin {
+  margin: -8px 0 0 !important;
+}
+
+.dropdown-light {
+  .commonglyphs-more {
+    font-size: 20px;
+  }
+}

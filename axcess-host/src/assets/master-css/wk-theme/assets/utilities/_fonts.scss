@@ -1,0 +1,127 @@
+//normal font path
+$font-path: "/assets/fonts/" !default;
+//map to bootstrap glyphs
+$icon-font-path: "/assets/fonts/bootstrap/" !default;
+//start: axcess icons
+$font-weight: (light: 300, regular: 400, medium: 500, semibold: 600, bold: 700, extrabold: 800) !default;
+////todo make this suck less
+@font-face {
+    font-family: 'Axcess Common';
+    font-style: normal;
+    font-weight: normal;
+    src: url("#{$font-path}axcess-common/axcesscommon.eot") format("eot"),
+    url("#{$font-path}axcess-common/axcesscommon.svg") format("svg"),
+    url("#{$font-path}axcess-common/axcesscommon.ttf") format("ttf"),
+    url("#{$font-path}axcess-common/axcesscommon.woff") format("woff"),
+    url("#{$font-path}axcess-common/axcesscommon.woff") format("woff2");
+}
+
+@font-face {
+    font-family: 'Axcess Common2';
+    font-weight: normal;
+    font-style: normal;
+    src : url("#{$font-path}axcess-common2/commonglyph2.woff") format("woff");
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Axcess Common3';
+    src: url("#{$font-path}axcess-common2/commonglyph2-filled.woff") format('woff');
+}
+
+//fira sans
+@include wk-font-face("Fira Sans",
+$font-path+"FiraSans-Light/FiraSans-Light",
+map-get($font-weight,
+light));
+@include wk-font-face("Fira Sans",
+$font-path+"FiraSans-LightItalic/FiraSans-LightItalic",
+map-get($font-weight,
+light),
+italic);
+// Regular & Italic
+@include wk-font-face("Fira Sans",
+$font-path+"FiraSans-Regular/FiraSans-Regular",
+map-get($font-weight,
+regular));
+@include wk-font-face("Fira Sans",
+$font-path+"FiraSans-Italic/FiraSans-Italic",
+map-get($font-weight,
+regular),
+italic);
+// Medium & Medium Italic
+@include wk-font-face("Fira Sans",
+$font-path+"FiraSans-Medium/FiraSans-Medium",
+map-get($font-weight,
+medium));
+@include wk-font-face("Fira Sans",
+$font-path+"FiraSans-MediumItalic/FiraSans-MediumItalic",
+map-get($font-weight,
+medium),
+italic);
+// Bold & Bold Italic
+@include wk-font-face("Fira Sans",
+$font-path+"FiraSans-Bold/FiraSans-Bold",
+map-get($font-weight,
+bold));
+@include wk-font-face("Fira Sans",
+$font-path+"FiraSans-BoldItalic/FiraSans-BoldItalic",
+map-get($font-weight,
+bold),
+italic);
+// FRANZISKA
+// Light & Light Italic
+@include wk-font-face("Franziska",
+$font-path+"FFFranziskaWebProLight/FFFranziskaWebProLight",
+map-get($font-weight,
+light));
+@include wk-font-face("Franziska",
+$font-path+"FFFranziskaWebProLightItalic/FFFranziskaWebProLightItalic",
+map-get($font-weight,
+light),
+italic);
+// Medium & Medium Italic
+@include wk-font-face("Franziska",
+$font-path+"FFFranziskaWebProMedium/FFFranziskaWebProMedium",
+map-get($font-weight,
+medium));
+@include wk-font-face("Franziska",
+$font-path+"FFFranziskaWebProMediumItalic/FFFranziskaWebProMediumItalic",
+map-get($font-weight,
+medium),
+italic);
+// Regular & Regular Italic
+@include wk-font-face("Franziska",
+$font-path+"FFFranziskaWebPro/FFFranziskaWebPro",
+map-get($font-weight,
+regular));
+@include wk-font-face("Franziska",
+$font-path+"FFFranziskaWebProBookItalic/FFFranziskaWebProBookItalic",
+map-get($font-weight,
+regular),
+italic);
+// SemiBold & SemiBold Italic
+@include wk-font-face("Franziska",
+$font-path+"FFFranziskaWebProDemiBold/FFFranziskaWebProDemiBold",
+map-get($font-weight,
+semibold));
+@include wk-font-face("Franziska",
+$font-path+"FFFranziskaWebProDemiBoldItalic/FFFranziskaWebProDemiBoldItalic",
+map-get($font-weight,
+semibold),
+italic);
+// Bold & Bold Italic
+@include wk-font-face("Franziska",
+$font-path+"FFFranziskaWebProBold/FFFranziskaWebProBold",
+map-get($font-weight,
+bold));
+@include wk-font-face("Franziska",
+$font-path+"FFFranziskaWebProBoldItalic/FFFranziskaWebProBoldItalic",
+map-get($font-weight,
+bold),
+italic);
+@include wk-font-face("DejaVu Sans Mono",
+$font-path+"DejaVuSansMono-Regular/DejaVuSansMono-Regular",
+map-get($font-weight,
+regular));

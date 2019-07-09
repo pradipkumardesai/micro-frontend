@@ -1,0 +1,35 @@
+{
+  "_from": "wk-theme@latest",
+  "_id": "wk-theme@2.1.8",
+  "_inBundle": false,
+  "_integrity": "sha1-TVfrGDx5/wTXi8iweOhqos7mtzk=",
+  "_location": "/wk-theme",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "wk-theme@latest",
+    "name": "wk-theme",
+    "escapedName": "wk-theme",
+    "rawSpec": "latest",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://wkaxcess.pkgs.visualstudio.com/_packaging/Axcess.Npm/npm/registry/wk-theme/-/wk-theme-2.1.8.tgz",
+  "_shasum": "4d57eb183c79ff04d78bc8b078e86aa2cee6b739",
+  "_spec": "wk-theme@latest",
+  "_where": "C:\\Users\\Administrator\\Desktop\\MASTERCSS",
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Paste this code into your .npmrc file",
+  "devDependencies": {
+    "bootstrap": "^4.0.0"
+  },
+  "name": "wk-theme",
+  "version": "2.1.8"
+}

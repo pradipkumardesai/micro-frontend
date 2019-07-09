@@ -1,0 +1,40 @@
+.loader_container {
+  background-color: $wk-primary-gray-tint5;
+  display: table;
+  width: 100%;
+  padding: 50px;
+  .loader,
+  .loaderWhite {
+    display: table-cell;
+    text-align: center;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    font-weight: 900;
+    color: #757575;
+    font-size: 3em;
+  }
+  .loaderWhite {
+    color: $wk-primary-white;
+  }
+}
+
+/* Safari, Chrome */
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

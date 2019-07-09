@@ -1,0 +1,35 @@
+{
+  "_from": "wk-common-components@latest",
+  "_id": "wk-common-components@2.9.3",
+  "_inBundle": false,
+  "_integrity": "sha1-9MLPQFl779OXVnSm7kD+X7rouKU=",
+  "_location": "/wk-common-components",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "wk-common-components@latest",
+    "name": "wk-common-components",
+    "escapedName": "wk-common-components",
+    "rawSpec": "latest",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://wkaxcess.pkgs.visualstudio.com/_packaging/Axcess.Npm/npm/registry/wk-common-components/-/wk-common-components-2.9.3.tgz",
+  "_shasum": "f4c2cf40597befd3975674a6ee40fe5fbae8b8a5",
+  "_spec": "wk-common-components@latest",
+  "_where": "C:\\Users\\Administrator\\Desktop\\MASTERCSS",
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Paste this code into your .npmrc file",
+  "devDependencies": {
+    "@ng-bootstrap/ng-bootstrap": "^1.1.2"
+  },
+  "name": "wk-common-components",
+  "version": "2.9.3"
+}

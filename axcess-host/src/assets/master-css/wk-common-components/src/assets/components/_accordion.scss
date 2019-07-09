@@ -1,0 +1,400 @@
+// Accordion Tree
+
+.accordion-tree-container {
+  background-color: $wk-primary-gray-tint6;
+  color: $wk-primary-gray-shade1;
+  height: 100%;
+}
+
+tree-internal .tree .folding.node-collapsed:before {
+  content: '\e924';
+  color: $wk-primary-gray-tint1;
+}
+
+tree-internal .tree .folding.node-expanded:before {
+  content: '\e922';
+  color: $wk-primary-gray-tint1;
+}
+
+tree-internal .tree .node-value:after {
+  display: none !important;
+}
+
+.over-drop-target {
+  border: 2px dashed $wk-primary-gray-tint1 !important;
+  border-radius: 0px !important;
+}
+
+tree-internal .tree .folding {
+  cursor: pointer;
+}
+
+tree-internal ul.rootless {
+  padding-top: 10px !important;
+}
+
+tree-internal .tree .child-leaf+.node-value {
+  color: $wk-primary-blue !important;
+}
+
+.node-empty+.node-value {
+  color: #a3a3a3 !important;
+}
+
+.node-empty+.node-value:hover {
+  cursor: pointer;
+}
+
+.node-empty+.node-value.node-selected {
+  color: $wk-primary-gray !important;
+  border-bottom: 1.5px solid $wk-primary-gray !important;
+}
+
+.node-menu .node-menu-content {
+  border-radius: 0px !important;
+  background-color: white !important;
+  -webkit-box-shadow: 1px 2px 4px $wk-primary-gray-tint2 !important;
+  box-shadow: 1px 2px 4px $wk-primary-gray-tint2 !important;
+  padding: 5px 0px 5px 0px !important;
+}
+
+.node-menu .node-menu-content .node-menu-item:hover {
+  background-color: #dadada !important;
+  cursor: pointer !important;
+  color: #16181b !important;
+  border-radius: 0 !important;
+}
+
+tree-internal .tree .child-leaf+.node-value:hover {
+  cursor: pointer;
+  color: $wk-secondary-green !important;
+
+}
+
+tree-internal .tree .node-empty+.node-value:hover {
+  cursor: pointer;
+  color: $wk-secondary-green !important;
+
+}
+
+tree-internal .tree .child-leaf+.node-value.node-selected {
+  color: $wk-primary-gray !important;
+  border-bottom: 1.5px solid $wk-primary-gray !important;
+
+}
+
+.child-leaf+.node-value .node-name {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+
+.child-leaf+.node-value .node-template {
+  overflow: hidden;
+}
+
+.child-leaf+.node-value {
+  padding-top: 3px;
+}
+
+tree-internal .tree .node-empty:before {
+  content: '' !important;
+}
+
+tree-internal .tree .node-empty+.node-value .node-template .commonglyphs-folder::before {
+  content: '\e911' !important;
+  color: #BFBFBF !important;
+}
+
+.node-name {
+  padding-left: 5px;
+}
+
+.tree ul li .value-container {
+  padding-top: 5px !important;
+}
+
+// Accordion navigation
+
+.left-nav-with-accordion {
+  background-color: $wk-primary-gray-tint6;
+  width: 250px;
+  padding-top: 0px;
+  padding-bottom: 100px;
+  height: 100%;
+
+  .nav-link {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    font-family: "Fira Sans";
+    color: $wk-primary-gray !important;
+  }
+
+  .multiple-accordion {
+    background-color: $wk-primary-gray-tint6;
+
+    .card .card-header button {
+      color: $wk-primary-gray;
+      background-color: $wk-primary-gray-tint6;
+      width: 100%;
+      padding-left: 6px;
+    }
+
+    .card {
+      position: relative;
+      z-index: 99;
+      overflow: hidden;
+
+      .card-header {
+        position: relative;
+        z-index: 99;
+      }
+
+      .card-body {
+
+        nav {
+          .nav-link {
+            padding: 0.5rem 1rem;
+            padding-left: 12px;
+            font-family: "Fira Sans";
+            color: $wk-primary-blue !important;
+
+            &:hover {
+              color: $wk-secondary-green !important;
+            }
+
+            &:active {
+              color: $wk-primary-gray !important;
+            }
+
+          }
+        }
+
+      }
+    }
+
+    .card .card-header button[aria-expanded="true"] .accordionIcon {
+      padding-top: 5px;
+    }
+  }
+}
+
+%noBorders {
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+}
+
+.accordionBtn {
+  @extend %noBorders;
+  margin-bottom: 0.8rem;
+}
+
+.accordionBtn-secondary {
+  @extend %noBorders;
+  margin-bottom: 0.8rem;
+}
+
+// For ng-bootstrap 1.1
+ngb-accordion {
+  .card {
+    @extend %noBorders;
+    margin-bottom: 5px;
+
+    .card-header {
+      background: $wk-primary-gray-tint2;
+      padding: 0;
+      @extend %noBorders;
+
+      .accordionIcon {
+        transition: transform .25s linear;
+        -webkit-transition: -webkit-transform .25s linear;
+        padding-right: 10px;
+      }
+
+      &.active a .accordionIcon {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        padding-top: 10px;
+      }
+
+      a {
+        padding: 0.5rem 1rem;
+        display: block;
+        color: $wk-primary-white;
+      }
+    }
+  }
+}
+
+// For ng-bootstrap 2.2
+ngb-accordion {
+  .card {
+    @extend %noBorders;
+    margin-bottom: 5px;
+
+    .card-header {
+      background: $wk-primary-gray-tint2;
+      padding: 0;
+      @extend %noBorders;
+
+      button {
+        padding: 0.5rem 1rem;
+        display: block;
+        color: $wk-primary-white;
+        text-decoration: none;
+
+        &.collapsed .accordionIcon {
+          transition: transform .25s linear !important;
+          -webkit-transition: -webkit-transform .25s linear !important;
+          padding-right: 10px !important;
+        }
+      }
+
+      button[aria-expanded="true"] {
+        .accordionIcon {
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.secondary-accordion {
+  .card .card-header button {
+    width: 100%;
+  }
+
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+////// Static Nested Accordion
+%defaultUL {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nested-accord {
+  &>.card {
+    color: $wk-primary-gray;
+    border-bottom: 1px solid $wk-primary-gray-tint3 !important;
+
+    &>.active {
+      border-bottom: 1px solid $wk-primary-gray-tint3 !important;
+    }
+  }
+
+  .card .card-header a {
+    color: inherit !important;
+  }
+
+  button {
+    color: $wk-primary-gray !important;
+  }
+
+  .card {
+    margin-bottom: 0px !important;
+
+    .card-header {
+      background-color: $wk-primary-white;
+    }
+
+    .card-body {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      color: $wk-primary-gray;
+
+      .active-item-desc {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        padding-left: 16px;
+        line-height: 34px;
+      }
+    }
+
+    .card-header {
+      &>.active {
+        border-bottom: 1px solid $wk-primary-gray-tint3;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+////// Dynamic Nested Accordion
+.dynamic-nested-accord {
+  @extend %defaultUL;
+
+  ul {
+    @extend %defaultUL;
+  }
+
+  &>li {
+    &>.card {
+      color: $wk-primary-gray;
+      border-bottom: 1px solid $wk-primary-gray-tint3;
+
+      &>.active {
+        border-bottom: 1px solid $wk-primary-gray-tint3 !important;
+      }
+    }
+  }
+
+  .card {
+    border: none;
+
+    .card-header {
+      background-color: $wk-primary-white;
+      padding: 8px 16px;
+      border: none;
+
+      .title {
+        padding-left: 5px;
+        cursor: pointer;
+      }
+
+      .accordionIcon {
+        transition: transform .25s linear;
+        -webkit-transition: -webkit-transform .25s linear;
+        cursor: pointer;
+      }
+
+      &.active .accordionIcon {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        cursor: pointer;
+      }
+    }
+
+    .card-header {
+      &>.active {
+        border-bottom: 1px solid $wk-primary-gray-tint3;
+      }
+    }
+
+    .card-body {
+      padding-top: 0px;
+      padding-bottom: 0px;
+
+      .active-item-desc {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        padding-left: 16px;
+        line-height: 34px;
+      }
+    }
+  }
+}

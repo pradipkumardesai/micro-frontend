@@ -1,0 +1,49 @@
+{
+  "_from": "wk-wizard@latest",
+  "_id": "wk-wizard@2.0.5",
+  "_inBundle": false,
+  "_integrity": "sha1-LeklkJdhkM8NsAjcwH+QpF7xVrA=",
+  "_location": "/wk-wizard",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "wk-wizard@latest",
+    "name": "wk-wizard",
+    "escapedName": "wk-wizard",
+    "rawSpec": "latest",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://wkaxcess.pkgs.visualstudio.com/_packaging/Axcess.Npm/npm/registry/wk-wizard/-/wk-wizard-2.0.5.tgz",
+  "_shasum": "2de92590976190cf0db008dcc07f90a45ef156b0",
+  "_spec": "wk-wizard@latest",
+  "_where": "C:\\Users\\Administrator\\Desktop\\MASTERCSS",
+  "bundleDependencies": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "deprecated": false,
+  "description": "Paste this code into your .npmrc file",
+  "es2015": "fesm2015/wk-wizard.js",
+  "esm2015": "esm2015/wk-wizard.js",
+  "esm5": "esm5/wk-wizard.js",
+  "fesm2015": "fesm2015/wk-wizard.js",
+  "fesm5": "fesm5/wk-wizard.js",
+  "main": "bundles/wk-wizard.umd.js",
+  "metadata": "wk-wizard.metadata.json",
+  "module": "fesm5/wk-wizard.js",
+  "name": "wk-wizard",
+  "peerDependencies": {
+    "@angular/common": "^5.2.2",
+    "@angular/core": "^5.2.2",
+    "@ng-bootstrap/ng-bootstrap": "^2.0.0"
+  },
+  "sideEffects": false,
+  "typings": "wk-wizard.d.ts",
+  "version": "2.0.5"
+}

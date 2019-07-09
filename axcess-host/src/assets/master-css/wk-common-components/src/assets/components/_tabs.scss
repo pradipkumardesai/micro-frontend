@@ -1,0 +1,65 @@
+.nav-tabs .nav-link.active {
+    color: #9c9c9c !important;
+    background-color: $wk-primary-white !important;
+}
+
+.nav-pills>li>a {
+    border-radius: 0 !important;
+}
+
+.nav_sizing_pills {
+    letter-spacing: 1.3px !important;
+
+    .nav-pills {
+        border: 0;
+        margin-bottom: 15px !important;
+
+        li>a {
+            border: 0;
+            margin-right: 15px !important;
+            font-family: 'Fira Sans' !important;
+            color: $wk-primary-gray;
+            background: transparent !important;
+        }
+
+        // Focus for disabled elements
+        li>a.disabled:focus {
+            box-shadow: none !important;
+            color: #6c757d !important;
+        }
+
+        li>a.active,
+        li>a.active:hover,
+        li>a.active:focus {
+            border: 0;
+            border-bottom: 2px solid $wk-primary-blue !important;
+            box-shadow: none !important;
+            color: $wk-primary-gray !important;
+        }
+
+        li>a:focus {
+            border: 0;
+            -moz-box-shadow: 0 2px 0 rgba(0, 122, 195, 0.5);
+            -webkit-box-shadow: 0 2px 0 rgba(0, 122, 195, 0.5);
+            box-shadow: 0 2px 0 rgba(0, 122, 195, 0.5);
+            color: #9c9c9c !important;
+        }
+    }
+}
+
+.nav_sizing_large {
+    font-size: 22px;
+}
+
+.nav-tabs .nav-link {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.wk-nav-pill-with-no-tab-content-styles {
+    .tab-content {
+        border: none !important;
+        padding: 0px !important;
+
+    }
+}

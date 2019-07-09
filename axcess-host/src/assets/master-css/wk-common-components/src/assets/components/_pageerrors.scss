@@ -1,0 +1,90 @@
+.wk-page-error .wk-page-error-logo {
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 11.875rem;
+}
+
+.wk-page-error {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 55.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.attention-icon {
+  color: #dadada;
+  font-size: 5rem; 
+}
+
+.attention-icon-small {
+  color: #dadada;
+  font-size: 5rem;
+}
+
+@media (min-width: 37.5rem) {
+  .attention-icon {
+    font-size: 8rem;
+  }
+}
+
+.wk-page-error .wk-page-error-heading {
+  font-size: 2.0625rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #474747;
+}
+
+.wk-page-error .wk-page-error-message {
+  font-size: 1.4375rem;
+  margin-bottom: 1.375rem;
+  color: #474747;
+}
+
+.wk-page-error .wk-page-error-text {
+  color: #757575;
+  font-size: 1.1875rem;
+}
+
+.wk-page-error .wk-page-error-search {
+  background-color: #ededed;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 65rem) {
+  .wk-page-error .wk-page-error-search {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.wk-search-bar {
+  background-color: #f6f6f6;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.wk-page-error .wk-page-error-meta {
+  margin-top: 1.25rem;
+}
+
+.wk-page-error .wk-page-error-reference {
+  color: #757575;
+  font-size: .8125rem;
+}
+
+.wk-login-page {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 37.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.forgot-password {
+  text-align: end;
+}

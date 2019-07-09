@@ -1,5 +1,5 @@
 {
-    "authServerURL": "http://localhost:4201/",
+    "authServerURL": "http://localhost:4200/",
     "authCookieName": "AuthID",
     "authTokQuryPrmName": "auth"
 }

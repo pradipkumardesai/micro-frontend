@@ -1,0 +1,124 @@
+///
+/// Create a font face rule. Embedded OpenType, WOFF2, WOFF and TrueType
+/// files are automatically sourced.
+///
+/// Source - https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+///
+/// @author [Jonathan Neal](https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6)
+///
+/// @param {String} $name - font name
+/// @param {String} $path - path to font file
+/// @param {String} $weight [null] - font-weight value
+/// @param {String} $style [null] - font-style value
+/// @param {String} $exts [eot woff ttf] - space separated list of font extenstions
+///
+@mixin wk-font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf) {
+  $src: null;
+  $extmods: (eot: '?');
+  $formats: (otf: 'opentype', ttf: 'truetype');
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
+  }
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+// Mixin overridding the regular table-row-variant classes
+@mixin wk-table-row-variant($state, $color) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table > tbody > tr.#{$state} {
+      border: 1px solid $color;
+
+    > td.#{$state},
+    > th.#{$state},
+      &.#{$state} > td,
+      &.#{$state} > th {
+        background-clip: padding-box;
+        background-color: inherit;
+        border-bottom: 1px solid $color;
+        border-top: 1px solid $color;
+
+        a {
+          color: $color;
+
+          &:hover {
+            color: darken($color, 10%);
+            text-decoration: none;
+          }
+        }
+      }
+  }
+}
+
+//maps a collection of items to classnames
+@mixin map-to-class($map, $property, $sel, $divider: $sel) {
+  #{$sel} {
+    @each $k, $v in $map {
+      @at-root .#{$divider}-#{$sel}-#{$k} {
+        @if type-of($v) == map {
+          @include map-to-class($v, $property, $k, $divider) {
+            @content;
+          }
+        } @else {
+          #{$property}: $v;
+        }
+      }
+    }
+  }
+}
+
+//take commonglyphs and override third party icons in things such as ui-grid
+@mixin extend-icon($content) {
+  &::after {
+    content: $content;
+    font-family: 'Axcess Common';
+    font-size: 1rem;
+    font-style: normal;
+  }
+}
+
+@mixin wk-loading-icon($icon, $size) {
+  background: url($icon) no-repeat cover;
+  height: $size;
+  width: $size;
+}
+
+// Button sizes
+@mixin icon-button-size($size) {
+  font-size: $size / 2;
+  height: $size;
+  line-height: $size;
+  width: $size;
+}
+
+//easily add transitions to items
+@mixin transition($type: ease, $duration: .3s, $property: all) {
+  transition: $property $duration $type;
+}
+
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+//stop text from flowing outside of stuff
+@mixin stop-text-overflow($max-width) {
+  max-width: $max-width;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+

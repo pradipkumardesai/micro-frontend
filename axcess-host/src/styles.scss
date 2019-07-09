@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/master-css/wk-theme/assets/main';
+$font-path: 'assets/master-css/wk-theme/assets/fonts/';
+$icon-font-path: "assets/master-css/wk-theme/assets/fonts/bootstrap/";
+
+@import 'assets/master-css/wk-theme/assets/main';
+
+.bg-primary-wkGreen-base {
+    background-color: #85bc20;
+    padding: 5px;
+}

@@ -1,0 +1,33 @@
+.wk-search-icon-filter-input {
+  background-color: #ededed;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.wk-table-filtering-search-box,
+.wk-table-filtering-close-icon {
+  position: relative;
+}
+
+.wk-table-filtering-search-box::-ms-clear {
+  display: none;
+}
+
+.wk-table-filtering-close-icon {
+  background-image: none;
+  font-family: "Axcess Common";
+  text-align: center;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  cursor: pointer;
+  top: -27px;
+  right: 8px;
+  color: black;
+}
+
+.wk-table-filtering-search-box:not(:valid)~.wk-table-filtering-close-icon {
+  display: none;
+}

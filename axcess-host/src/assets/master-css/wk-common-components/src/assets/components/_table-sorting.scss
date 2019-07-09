@@ -1,0 +1,40 @@
+.desc:after {
+  content: '\e951';
+  background-image: none;
+  font-family: "Axcess Common";
+  text-align: center;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  transform: scaleX(-1);
+  font-weight: bold;
+  left: 7px;
+
+}
+
+
+.asc:after {
+  content: '\e951';
+  background-image: none;
+  font-family: "Axcess Common";
+  text-align: center;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: bold;
+  left: 7px;
+}
+
+.wk-table-sorting {
+  th {
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}

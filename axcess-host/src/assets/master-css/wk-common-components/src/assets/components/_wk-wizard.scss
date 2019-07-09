@@ -1,0 +1,43 @@
+.wk-wizard-finish-later,
+.wk-wizard-cancel {
+  padding-left: 0.75rem !important;
+  position: unset !important;
+}
+
+.wk-wizard-prev-step {
+  position: relative;
+  padding-left: 50px;
+
+  &[disabled] {
+    cursor: not-allowed;
+    background-color: #dadada !important;
+    color: black !important;
+    border-color: #dadada !important;
+
+    .coomonglyphs {
+      background-color: rgba(255, 255, 255, .2);
+      border-color: rgba(255, 255, 255, .2);
+    }
+
+    &:hover {
+      background-color: #bfbfbf !important;
+      border-color: #bfbfbf !important;
+    }
+  }
+
+  .commonglyphs {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    padding: 0.375rem 0.75rem;
+    background-color: rgba(255, 255, 255, .2);
+    border-color: rgba(255, 255, 255, .2);
+    height: 35px;
+  }
+}
+
+.wizard .wizard-item .wizard-link .wizard-count-wrap .wizard-count {
+  .commonglyphs-check {
+    cursor: pointer;
+  }
+}

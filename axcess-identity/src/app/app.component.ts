@@ -15,6 +15,6 @@ export class AppComponent {
   }
 
   doLogin() {
-    window.location.href="http://localhost:4200/am?auth=abcd1234";
+    window.location.href="http://localhost:4201/am?auth=abcd1234";
   }
 }

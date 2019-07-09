@@ -1,0 +1,25 @@
+.custom-card {
+    height: 500px;
+    border-radius: 0;
+    -webkit-box-shadow: 1px 2px 4px $wk-primary-gray-tint2;
+    box-shadow: 1px 2px 4px $wk-primary-gray-tint2;
+    .card-header {
+      font-size: 23px;
+      padding: 0.45rem 1.25rem;
+      background-color: $wk-primary-blue;
+      color: white;
+      font-weight: 400;
+      border-radius: 0;
+    }
+  }
+  .custom-card {
+    .float-right {
+      cursor: pointer;
+    }
+  }
+  .card-demo-styles {
+    height: 250px;
+    cursor: pointer;
+  }
+  
+  

@@ -1,0 +1,402 @@
+@mixin before-styles {
+    background-image: none;
+    font-family: "Axcess Common";
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.pagination-select-dropdown::after {
+    content: '\e922';
+    display: inline-block;
+    font-family: "Axcess Common";
+    font-style: normal;
+    text-rendering: auto;
+    position: absolute;
+    top: 9px;
+    left: 184px;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.pagination-select-dropdown {
+    select {
+        padding: 7.5px 24px;
+    }
+}
+
+// For ng-bootstrap >= 4.1.0
+.wk-default-pagination {
+    .pagination.pagination-lg .page-item {
+
+        a[aria-label="Previous"],
+        a[aria-label="Next"],
+        a[aria-label="First"],
+        a[aria-label="Last"] {
+            background-color: #007ac3;
+            color: #fff;
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+        }
+    }
+}
+
+.wk-default-pagination {
+    .pagination.pagination-sm .page-item {
+
+        a[aria-label="Previous"],
+        a[aria-label="Next"],
+        a[aria-label="First"],
+        a[aria-label="Last"] {
+            background-color: #007ac3;
+            color: #fff;
+            padding-top: 7px;
+            padding-bottom: 7px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+        }
+    }
+}
+
+.wk-default-pagination {
+    .pagination .page-item {
+
+        a[aria-label="Previous"],
+        a[aria-label="Next"],
+        a[aria-label="First"],
+        a[aria-label="Last"] {
+            background-color: #007ac3;
+            color: #fff;
+            padding-top: 7px;
+            padding-bottom: 7px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            &::before {
+                top: 3px;
+            }
+        }
+    }
+}
+
+// For ng-bootstrap < 4.1.0
+.wk-default-pagination {
+    .pagination.pagination-lg .page-item {
+        a[aria-label="Last"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 55.6px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 1px;
+                content: '\e95f' !important;
+                @include before-styles;
+            }
+        }
+
+        a[aria-label="First"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 55.6px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 1px;
+                content: '\e960' !important;
+                @include before-styles;
+            }
+        }
+
+        a[aria-label="Previous"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 55.6px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 1px;
+                content: '\e928' !important;
+                @include before-styles;
+            }
+        }
+
+        a[aria-label="Next"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 55.6px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 1px;
+                content: '\e924' !important;
+                @include before-styles;
+            }
+        }
+
+        .page-link {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+.wk-default-pagination {
+    .pagination.pagination-sm .page-item {
+        a[aria-label="Last"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 31.6px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 1px;
+                content: '\e95f' !important;
+                @include before-styles;
+            }
+        }
+
+        a[aria-label="First"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 31.6px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 1px;
+                content: '\e960' !important;
+                @include before-styles;
+            }
+        }
+
+        a[aria-label="Previous"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 31.6px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 1px;
+                content: '\e928' !important;
+                @include before-styles;
+            }
+        }
+
+        a[aria-label="Next"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 31.6px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 1px;
+                content: '\e924' !important;
+                @include before-styles;
+            }
+        }
+
+        .page-link {
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+    }
+}
+
+.wk-default-pagination {
+    .pagination .page-item {
+        a[aria-label="Last"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 37.8px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 3px;
+                content: '\e95f' !important;
+                @include before-styles;
+            }
+        }
+
+        a[aria-label="First"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 37.8px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 3px;
+                content: '\e960' !important;
+                @include before-styles;
+            }
+        }
+
+        a[aria-label="Previous"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 37.8px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 3px;
+                content: '\e928' !important;
+                @include before-styles;
+            }
+        }
+
+        a[aria-label="Next"] {
+            background-color: #007ac3;
+            color: #fff;
+            height: 37.8px;
+
+            &:hover {
+                background-color: #409bd2;
+            }
+
+            span {
+                display: none !important;
+            }
+
+            &::before {
+                top: 3px;
+                content: '\e924' !important;
+                @include before-styles;
+            }
+        }
+
+        .page-link {
+            padding-top: 10.5px;
+            padding-bottom: 10.5px;
+        }
+    }
+}
+
+.wk-default-pagination {
+    .page-link {
+        border: 0px;
+        background-color: #a6d1ea;
+        color: #007ac3;
+
+        &:hover {
+            background-color: #80bde1;
+            color: #007ac3;
+        }
+    }
+
+    .page-item.active .page-link {
+        background-color: #fff;
+        color: #007ac3;
+
+        &:hover {
+            background-color: #80bde1;
+            color: #007ac3;
+        }
+    }
+}
+
+.disabled {
+    cursor: not-allowed !important;
+
+    .page-link {
+        background-color: #dadada !important;
+        color: #fff !important;
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+    }
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}

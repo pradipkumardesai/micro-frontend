@@ -1,0 +1,27 @@
+.wk-grouped-header-column {
+  thead {
+    border: 1px solid #BFBFBF;
+
+    td {
+      padding: 3px;
+      vertical-align: middle;
+    }
+  }
+
+  th,
+  td {
+    border-top: 0px;
+  }
+
+  th {
+    text-transform: uppercase;
+    vertical-align: middle
+  }
+
+  .wk-grouped-header-column-second-row {
+    th {
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+  }
+}

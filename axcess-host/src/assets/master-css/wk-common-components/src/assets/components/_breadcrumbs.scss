@@ -1,0 +1,8 @@
+.breadcrumb {
+    a {
+        text-decoration: none;
+        &:hover {
+            color: $wk-secondary-green;
+        }
+    }
+}

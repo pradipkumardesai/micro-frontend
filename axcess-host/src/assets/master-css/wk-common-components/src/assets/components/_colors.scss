@@ -1,0 +1,29 @@
+@include map-to-class($wk-primary-colors, color, text-primary);
+@include map-to-class($wk-primary-colors, background-color, bg-primary);
+@include map-to-class($wk-secondary-colors, color, text-secondary);
+@include map-to-class($wk-secondary-colors, background-color, bg-secondary);
+
+.color-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    height: 150px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  code {
+    background-color: inherit;
+    font-size: 100%;
+    color: $wk-primary-gray;
+  }
+
+  .dark {
+    color: #474747;
+  }
+
+  .darkColor {
+    color: white;
+  }
+}

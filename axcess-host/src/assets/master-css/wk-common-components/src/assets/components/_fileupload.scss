@@ -1,0 +1,124 @@
+.file-upload {
+    position: relative;
+    border: 1px solid #dadada;
+    padding: 10px;
+    &__button {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    &__content {
+      border: 1px solid #dadada;
+      min-height: 500px;
+      & .drag-drop {
+        width: 75%;
+        margin: 80px auto 0;
+        text-align: center;
+        padding: 50px 0;
+        &.drop {
+          border: 4px dashed #dadada;
+        }
+      }
+    }
+    &__list {
+      margin-bottom: -100px; // Just for Demo Style
+      position: absolute;
+      right: 10px;
+      bottom: 0px;
+      width: 350px;
+      border: 1px solid #dadada;
+      background: #fff;
+      & .list-heading {
+        padding: 15px 50px 15px 20px;
+        position: relative;
+        .list-collapse,
+        .list-close {
+          position: absolute;
+          top: 12px;
+          cursor: pointer;
+        }
+        .list-collapse {
+          right: 35px;
+        }
+        .list-close {
+          right: 10px;
+        }
+      }
+      & .list-status {
+        border-top: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
+        padding: 5px;
+        background: #eeeeee;
+        .list-progess {
+          .list-progress-wrap {
+            box-shadow: inset -1px 2px 3px rgba(0, 0, 0, 0.2);
+            width: 75%;
+            height: 20px;
+            border-radius: 3px;
+            float: left;
+            background: #f9f9f9;
+            .list-progress-bar {
+              background: $wk-primary-blue;
+              height: 100%;
+            }
+          }
+          .list-progress-cancel {
+            width: 25%;
+            float: left;
+            text-align: right;
+            a:hover {
+              color: #85bc20;
+            }
+            .btn {
+              padding-top: 0;
+              padding-bottom: 0;
+            }
+          }
+        }
+        .list-status-text.error {
+          color: #e5202e;
+        }
+      }
+      & .list-items {
+        padding: 5px;
+        height: 250px;
+        overflow: auto;
+        .list-group-item {
+          border: none;
+          &:nth-child(even) {
+            background: #f3f3f2;
+          }
+          .badge {
+            background: transparent;
+            padding: 0;
+            .commonglyphs {
+              font-size: 16px;
+            }
+            .commonglyphs-check {
+              color: #b0ce64;
+            }
+            .commonglyphs-attention {
+              color: #e5202e;
+              position: absolute;
+              right: 15px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+          .error {
+            color: #e5202e;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  
+  .content-margin {
+    margin: 18px;
+  }
+  
+  .upload-progress-bar {
+    width: 60%;
+  }
+  
+  

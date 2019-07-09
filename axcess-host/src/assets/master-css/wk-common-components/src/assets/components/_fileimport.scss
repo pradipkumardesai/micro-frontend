@@ -1,0 +1,210 @@
+// File Import Styles
+.file-browser {
+  width: 100%;
+  position: relative;
+  border: 1px solid #dadada;
+  margin-bottom: 16px;
+  background: #f6f6f6;
+  .file-browser-area {
+    padding: 32px 20px;
+    background: #fff;
+    position: relative;
+    .drop-area {
+      .drop-invisible-area {
+        padding-bottom: 16px;
+      }
+      .drop-visible-area {
+        color: #666666;
+        text-align: center;
+        padding: 32px;
+        font-size: 18px;
+        border: 4px dashed #dadada;
+        display: none;
+      }
+      &.drop {
+        .drop-invisible-area {
+          display: none;
+        }
+        .drop-visible-area {
+          display: block;
+          margin-bottom: 16px;
+        }
+      }
+    }
+    p {
+      text-align: center;
+      .upload-icon {
+        color: $wk-primary-blue;
+        font-size: 32px;
+        height: 32px;
+      }
+      .upload-or {
+        color: #bcbcbc;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .after-browse {
+      padding-bottom: 20px;
+    }
+    input {
+      display: none;
+    }
+    .loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      display: none;
+      &.load {
+        display: block;
+      }
+      .loading-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 300px;
+        height: 100px;
+      }
+      i,
+      span {
+        color: #666666;
+      }
+    }
+    .file-list {
+      display: table;
+      margin: 0 auto;
+      .file-list-item {
+        text-align: center;
+        margin-bottom: 5px;
+        display: table-row;
+        .file-item-text {
+          font-weight: bold;
+          text-transform: uppercase;
+          padding-right: 10px;
+          display: table-cell;
+        }
+        .file-item-delete {
+          cursor: pointer;
+          color: #e5202e;
+          display: table-cell;
+        }
+      }
+    }
+  }
+}
+
+.bordered {
+  border: 1px solid #dadada;
+}
+
+.error {
+  color: #e5202e;
+}
+
+.mapping-footer,
+.import-footer {
+  border-top: none !important;
+}
+
+.mapping-modal {
+  border: 0 !important;
+  margin-left: 0 !important;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+// Mapping columns
+.extract-dropdown {
+  width: 100%;
+  .btn {
+    width: 100%;
+    box-shadow: none !important;
+    .caret {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: .255em;
+      vertical-align: .255em;
+      border-top: .3em solid;
+      border-right: .3em solid transparent;
+      border-bottom: 0;
+      border-left: .3em solid transparent;
+    }
+  }
+  .btn,
+  .btn:hover,
+  .btn:focus,
+  .btn:active {
+    background-color: #fff !important;
+    border: 1px solid #dadada !important;
+    color: #474747 !important;
+  }
+  .select-text {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 20px);
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .dropdown-menu {
+    width: 100%;
+    padding: 8px;
+    button {
+      position: relative;
+      padding: 10px !important;
+      span.commonglyphs-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-left: 1px solid #dadada;
+        height: 100%;
+        padding: 0 10px;
+        line-height: 3;
+        color: #e5202e;
+      }
+      &.menu-footer {
+        margin-top: 10px;
+        border-top: 1px solid #dadada;
+        color: #007AC3;
+      }
+    }
+  }
+}
+
+.mapping-header {
+  background-color: #e6e6e6 !important;
+  color: #000 !important;
+}
+
+.mapping-title {
+  display: inline !important;
+}
+
+.import-cancel-ok-btn {
+  width: 80px;
+}
+
+.map-column {
+  margin-bottom: 16px;
+}
+
+.req-column {
+  padding: 0 10px;
+  border-left: 1px solid #dadada;
+}
+
+.mapping-column-table {
+  .commonglyphs-arrow-down {
+    color: $wk-primary-blue
+  }
+}
+

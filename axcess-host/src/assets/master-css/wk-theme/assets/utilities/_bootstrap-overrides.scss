@@ -1,0 +1,191 @@
+$font-family-base: Fira Sans,
+Helvetica,
+sans-serif;
+$body-bg: $wk-primary-white;
+$body-color: $wk-primary-gray;
+$primary: $wk-primary-blue;
+$success: $wk-primary-green;
+$info: $wk-primary-blue-tint2;
+$warning: $wk-secondary-orange;
+$danger: $wk-primary-red;
+$font-size-base: 0.875rem !default;
+@import '../utilities/colors-variables';
+//override bootstrap default colors
+$gray-base: $wk-primary-gray;
+$gray-darker: lighten($gray-base, 13.5%) !default;
+$gray-dark: lighten($gray-base, 20%) !default;
+$gray: lighten($gray-base, 33.5%) !default;
+$gray-light: lighten($gray-base, 46.7%) !default;
+$gray-lighter: lighten($gray-base, 93.5%) !default;
+$brand-primary: $wk-primary-blue !default;
+$brand-success: $wk-primary-green !default;
+$brand-info: $wk-primary-blue-tint2 !default;
+$brand-warning: $wk-secondary-orange !default;
+$brand-danger: $wk-primary-red !default;
+// Breadcrumbs
+$breadcrumb-divider:'»';
+$breadcrumb-divider-color: #ccc !default;
+$breadcrumb-active-color:#bebebe !default;
+$breadcrumb-bg:#f5f5f5 !default;
+//Navbar
+$navbar-default-color: $wk-primary-white !default;
+$navbar-default-bg: $brand-primary !default;
+$navbar-default-border: darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-color: $wk-primary-white !default;
+$navbar-default-link-hover-color: $wk-primary-white !default;
+$navbar-default-link-hover-bg: $brand-info !default;
+$navbar-default-link-active-color: $wk-primary-white !default;
+$navbar-default-link-active-bg: $wk-primary-blue-shade1 !default;
+$navbar-default-link-disabled-color: #ccc !default;
+$navbar-default-link-disabled-bg: transparent !default;
+//contextual classes and states
+$state-success-text: $wk-secondary-green !default;
+$state-success-bg: $wk-primary-white !default;
+$state-success-border: $state-success-text !default;
+$state-info-text: $wk-primary-blue !default;
+$state-info-bg: $wk-primary-white !default;
+$state-info-border: $state-info-text !default;
+$state-warning-text: $wk-secondary-orange !default;
+$state-warning-bg: $wk-primary-white !default;
+$state-warning-border: $state-warning-text !default;
+$state-danger-text: $wk-primary-red !default;
+$state-danger-bg: $wk-primary-white !default;
+$state-danger-border: $state-danger-text !default;
+//end bootstrap overrides
+//Overrides for angularjs toaster
+//@author cole mecum
+$textColor: $wk-primary-white !default;
+$textColorHover: #ccc !default;
+$closeButton: $wk-primary-white !default;
+$closeButtonHover: $wk-primary-black !default;
+$toast: $wk-primary-blue !default;
+$toastSuccess: $wk-secondary-green !default;
+$toastError: $wk-primary-red !default;
+$toastInfo: $wk-primary-blue-tint3 !default;
+$toastWarning: $wk-secondary-orange !default;
+$toastContainerColor: $wk-primary-black !default;
+$toastContainerShadowColor: #999 !default;
+$toastContainerShadowColorHover: $wk-primary-black;
+$list-group-active-bg: $wk-primary-gray-tint4;
+$list-group-active-color: #555;
+//border radius
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+//switch related
+$global-text-direction: ltr;
+// Internal variables used for text direction
+$global-left: if($global-text-direction==rtl, right, left);
+$global-right: if($global-text-direction==rtl, left, right);
+/// Background color of a switch.
+/// @type Color
+$switch-background: $wk-primary-gray-tint3 !default;
+/// Background active color of a switch.
+/// @type Color
+$switch-background-active: $wk-primary-green !default;
+/// Height of a switch, with no class applied.
+/// @type Number
+$switch-height: 2rem !default;
+/// Height of a switch with .tiny class.
+/// @type Number
+$switch-height-tiny: 1.5rem !default;
+/// Height of a switch with .small class.
+/// @type Number
+$switch-height-small: 2rem !default;
+/// Height of a switch with .large class.
+/// @type Number
+$switch-height-large: 3rem !default;
+/// Border radius of the switch
+/// @type Number
+$switch-radius: $border-radius-base !default;
+/// border around a modal.
+/// @type Number
+$switch-margin: 10px !default;
+/// Background color for the switch container and paddle.
+/// @type Color
+$switch-paddle-background: $wk-primary-white !default;
+/// Spacing between a switch paddle and the edge of the body.
+/// @type Number
+$switch-paddle-offset: 0 !default;
+/// border radius of the switch paddle
+/// @type Number
+$switch-paddle-radius: $border-radius-base !default;
+/// switch transition.
+/// @type Number
+$switch-paddle-transition: all .25s ease-out !default;
+//
+// Jumbotron
+// --------------------------------------------------
+$jumbotron-bg: $wk-primary-gray-tint6;
+$jumbotron-color: #555;
+$jumbotron-font-size: 1.5rem;
+//just for the h1 tag
+$jumbotron-heading-font-size: 5rem;
+$jumbotron-heading-color: #404040;
+$jumbotron-padding: 20px;
+// Core loading options
+$loading-icon: '../assets/loading/WKworking.gif';
+$loading-icon-size: 32px;
+$loading-fullscreen-mask-color: rgba(0, 0, 0, .35);
+$loading-fullscreen-zindex: 10000;
+$loading-fullscreen-dimensions: 100%;
+$loading-fullscreen-location: 0;
+$loading-fullscreen-padding-width: 4rem;
+$loading-fullscreen-padding-color: #f9f8f7;
+//Overrides for angularjs toaster
+//@author cole mecum
+$textColor: $wk-primary-white !default;
+$textColorHover: #ccc !default;
+$closeButton: $wk-primary-white !default;
+$closeButtonHover: $wk-primary-black !default;
+$toast: $wk-primary-blue !default;
+$toastSuccess: $wk-secondary-green !default;
+$toastError: $wk-primary-red !default;
+$toastInfo: $wk-primary-blue-tint3 !default;
+$toastWarning: $wk-secondary-orange !default;
+$toastContainerColor: $wk-primary-black !default;
+$toastContainerShadowColor: #999 !default;
+$toastContainerShadowColorHover: $wk-primary-black;
+$card-border-radius: 0;
+
+.nav-link {
+
+  // Disabled state for nav-link
+  &.disabled {
+    cursor: not-allowed;
+    color: #6c757d !important;
+  }
+}
+
+.dropdown-item:hover {
+  background-color: #dadada !important;
+  cursor: pointer;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:active {
+  color: black !important;
+  background-color: #dadada !important;
+  border-color: #dadada !important;
+}
+
+// href hover color
+.hoverColor {
+  &:hover {
+    color: $wk-secondary-green;
+  }
+}
+
+.tab-content {
+  border: 1px solid #dee2e6;
+  border-width: 0 1px 1px;
+  padding: 10px;
+}
+
+.cursor-move,
+.gu-mirror {
+  cursor: move;
+}
+
+$input-border-radius:0px !default;

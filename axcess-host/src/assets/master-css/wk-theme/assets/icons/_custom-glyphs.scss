@@ -1,0 +1,71 @@
+.customglyphs {
+  background-image: none;
+  font-family: 'Axcess Common';
+  text-align: center;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+
+  [class^='xcessglyphs-'],
+  [class*=' customglyphs-'] {
+    color: $wk-primary-gray-tint4 default;
+  }
+
+  &-consolidate-icon:before {
+    content: "\e92a";
+  }
+
+  &-html:before {
+    content: "\e902";
+  }
+
+  &-xls:before {
+    content: "\e903";
+  }
+
+  &-ppt:before {
+    content: "\e904";
+  }
+
+  &-message:before {
+    content: "\e905";
+  }
+
+  &-pdf:before {
+    content: "\e906";
+  }
+
+  &-text:before {
+    content: "\e907";
+  }
+
+  &-zip:before {
+    content: "\e978";
+  }
+
+  &-dropbox:before {
+    content: "\e979";
+  }
+
+  &-file:before {
+    content: "\e911";
+  }
+
+  &-image:before {
+    content: "\e947";
+  }
+
+  &-video:before {
+    content: "\e948";
+  }
+
+  &-all-notes:before {
+    content: "\e975";
+  }
+
+  &-note:before {
+    content: "\e976";
+  }
+}

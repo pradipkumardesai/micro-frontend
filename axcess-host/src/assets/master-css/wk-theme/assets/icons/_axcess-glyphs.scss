@@ -1,0 +1,83 @@
+//todo don't repeat yourself.
+.axcessglyphs {
+  font-family: 'Axcess Common';
+  text-align: center;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  &::before {
+    color: $wk-primary-white;
+    margin-left: 5px;
+    padding: 10px;
+  } //keeping this for backwards compatibility
+  [class^='axcessglyphs-'],
+  [class*=' axcessglyphs-'] {
+    &::before {
+      color: $wk-primary-white;
+      margin-left: 5px;
+      padding: 10px;
+    }
+  }
+  &-business-intelligence:before {
+    background-color: $wk-primary-gray;
+    content: "\e929";
+  }
+  &-financial-prep:before {
+    background-color: $wk-secondary-orange;
+    content: "\e977";
+  }
+  &-administration:before {
+    background-color: $wk-secondary-green;
+    content: "\e93d";
+  }
+  &-accounts-receivables:before {
+    background-color: $wk-primary-green;
+    content: "\e93e";
+  }
+  &-billing-invoicing:before {
+    background-color: $wk-primary-green;
+    content: "\e93f";
+  }
+  &-tax:before {
+    background-color: $wk-primary-blue;
+    content: "\e940";
+  }
+  &-document:before {
+    background-color: $wk-secondary-purple;
+    content: "\e92b";
+  }
+  &-workstream:before {
+    background-color: $wk-primary-red;
+    content: "\e92c";
+  }
+  &-staff:before {
+    background-color: $wk-secondary-green;
+    content: "\e92d";
+  }
+  &-security:before {
+    background-color: $wk-secondary-green;
+    content: "\e92e";
+  }
+  &-clients:before {
+    background-color: $wk-secondary-green;
+    content: "\e92f";
+  }
+  &-reports:before {
+    background-color: $wk-secondary-green;
+    content: "\e930";
+  }
+  &-time-capture:before {
+    background-color: $wk-primary-green;
+    content: "\e935";
+  }
+  &-settings:before {
+    background-color: $wk-secondary-green;
+    content: "\e964";
+  }
+  &-firm:before {
+    background-color: $wk-secondary-green;
+    content: "\e97c";
+  }
+}
