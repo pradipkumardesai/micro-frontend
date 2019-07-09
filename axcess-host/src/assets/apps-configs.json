@@ -1,19 +1,20 @@
+
 [
     {
         "moduleName": "am",
-        "url": "http://localhost/wk-admin-manager/axcess-fam.all.js",
+        "url": "http://fam-dev-vm1.eastus.cloudapp.azure.com/wk-admin-manager/axcess-fam.all.js",
         "elementName": "axcess-fam",
         "allowed": true
     },
     {
         "moduleName": "tax",
-        "url": "http://localhost/wk-tax/axcess-tax.all.js",
+        "url": "http://fam-dev-vm1.eastus.cloudapp.azure.com/wk-tax/axcess-tax.all.js",
         "elementName": "axcess-tax",
         "allowed": false
     },
     {
         "moduleName": "login",
-        "url": "http://localhost/axcess-identity/axcess-identity.all.js",
+        "url": "http://fam-dev-vm1.eastus.cloudapp.azure.com/axcess-identity/axcess-identity.all.js",
         "elementName": "axcess-identity",
         "allowed": true
     }

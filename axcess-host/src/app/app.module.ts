@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { routes } from './app.route.module';
 import { SharedModule } from './shared/shared.module';
 import { CookieService } from 'ngx-cookie-service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CookieService } from 'ngx-cookie-service';
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    HttpClientModule ,
     CoreModule,
     SharedModule
   ],

@@ -1,5 +1,5 @@
 {
-    "authServerURL": "http://localhost:4200/",
+    "authServerURL": "http://fam-dev-vm1.eastus.cloudapp.azure.com/IDSOAuthMock",
     "authCookieName": "AuthID",
-    "authTokQuryPrmName": "auth"
+    "authTokQuryPrmName": "accesstoken"
 }
