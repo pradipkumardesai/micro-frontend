@@ -19,7 +19,7 @@ export class AuthService {
     
     let autId: string = this.cookieService.get(this.AUTH_ID)
     if (autId) {
-      alert(autId);
+     
       let httpOptions = {
         headers: new HttpHeaders({
           'Content-Type':  'application/json',
@@ -28,7 +28,7 @@ export class AuthService {
       };
            
       this.http.get("https://z001test4commonservices.cchaxcess.com/CommonWebAPI/dashboardLinks/filteredlinksbygroup",httpOptions).subscribe(links=>{
-        alert(JSON.stringify(links))
+        console.log(JSON.stringify(links));
       });
       return true;
 

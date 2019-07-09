@@ -1,27 +1,29 @@
+<div>
+  <img src="assets\images\wolters-kluwer-logo-large-dark.png" alt="">
+</div>
 <div class="card">
   
   <div>
     <nav class="navbar bg-primary-wkBlue-base p-0 wk-navbar-product-name">
       <span class="navbar-text ml-auto bg-primary-wkGreen-base text-primary-wkWhite-base">
-        Product Name </span>
+        CCH Axcess </span>
     </nav>
    
+    <div style="padding: 10px;">
+      <div style="display: flex;padding-bottom: 10px;">
+        <div style="padding-top: 10px;"><a [routerLink]="['/', 'am']">Admin manager</a></div>
+        <div style="margin-left: 10px;padding-top: 10px;"><a [routerLink]="['/', 'tax']">Tax</a></div>
+        <div style="padding-left: 20px;"><button  class="btn btn-danger" (click)="doLogout()">Logout</button></div>
+      </div>
+      <div style="margin-top: 10px;padding: 10px;" id="content" class="content">
+    
+       
+      </div>
+      <div style="margin-top: 10px;padding: 10px;" id="content1" class="content1">
+    
+       
+      </div>
+    </div>
   </div>
 </div>
 
-<div style="border:1px solid red;padding: 10px;">
-  <h1>Axcess common shell</h1>
-  <div style="display: flex;padding-bottom: 10px;">
-    <div><a [routerLink]="['/', 'am']">Admin manager</a></div>
-    <div style="margin-left: 10px;"><a [routerLink]="['/', 'tax']">Tax</a></div>
-    <div style="padding-left: 20px;"><button (click)="doLogout()">Logout</button></div>
-  </div>
-  <div style="margin-top: 10px;padding: 10px;" id="content" class="content">
-
-   
-  </div>
-  <div style="margin-top: 10px;padding: 10px;" id="content1" class="content1">
-
-   
-  </div>
-</div>
