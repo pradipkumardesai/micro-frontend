@@ -15,6 +15,7 @@ export class AppLinksComponent implements OnInit {
   ngOnInit() {
     this.appLinkService.getLinks().subscribe(links => {
       this.links = links;
+      console.log(JSON.stringify(this.links));
     });
   }
 

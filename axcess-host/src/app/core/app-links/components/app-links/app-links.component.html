@@ -1,3 +1,5 @@
-<ul *ngFor="let linkObject of links">
-  <li>>> {{linkObject.groupName}}</li>
-</ul>
+<div>
+  <div *ngFor="let linkObject of links">
+    <app-link-card [linkGroup]="linkObject"></app-link-card>
+  </div>
+</div>

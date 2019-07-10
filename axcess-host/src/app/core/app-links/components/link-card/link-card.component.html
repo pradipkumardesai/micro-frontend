@@ -1,0 +1,9 @@
+<div style="margin: 10px;padding: 5px;background-color: white" class="wk-card">
+  <!-- <div>{{linkGroup.groupName}}</div> -->
+  <h2><a class="c1"><span class="axcessglyphs dashboardGlyphContainer" style="margin-top: 10px;"><span class="{{linkGroup.iconDetails}}">&nbsp;</span></span>{{linkGroup.groupName | uppercase}}</a></h2>
+  <ul style="list-style: none;">  
+    <li *ngFor="let link of linkGroup.appLinks"> 
+        <span class="commonglyphs"><span class="commonglyphs-arrow-right">&nbsp;</span></span>
+        <a href="">{{link.ldDescription}}</a>
+  </ul>
+</div>
