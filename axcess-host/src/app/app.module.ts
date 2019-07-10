@@ -7,7 +7,8 @@ import { CoreModule } from './core/core.module';
 import { routes } from './app.route.module';
 import { SharedModule } from './shared/shared.module';
 import { CookieService } from 'ngx-cookie-service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './core/services/interceptor/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,14 @@ import { HttpClientModule } from '@angular/common/http';
     CoreModule,
     SharedModule
   ],
-  providers: [CookieService],
+  providers: [
+    CookieService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
