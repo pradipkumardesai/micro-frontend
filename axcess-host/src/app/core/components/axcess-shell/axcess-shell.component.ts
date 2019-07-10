@@ -5,7 +5,6 @@ import { AppsConfigService } from '../../services/apps-config/apps-config.servic
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from 'src/app/guards/authentication/authentication-service/auth.service';
 
-
 @Component({
   selector: 'app-axcess-shell',
   templateUrl: './axcess-shell.component.html',
@@ -13,10 +12,11 @@ import { AuthService } from 'src/app/guards/authentication/authentication-servic
 })
 export class AxcessShellComponent implements OnInit {
   title = 'axcess-host';
+  isMenuPanelVisible: boolean = false;
 
-  constructor(private authService:AuthService,private cookieService: CookieService, private activatedRoute: ActivatedRoute, private elementLoaderService: ElementLoaderService, private appsConfigService: AppsConfigService) { }
+  constructor(private authService: AuthService, private cookieService: CookieService, private activatedRoute: ActivatedRoute, private elementLoaderService: ElementLoaderService, private appsConfigService: AppsConfigService) { }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {
     this.activatedRoute.params.subscribe((param) => {
       this.appsConfigService.loadModule(param.id);
     });
@@ -24,6 +24,10 @@ export class AxcessShellComponent implements OnInit {
 
   doLogout() {
     this.authService.logout();
+  }
+
+  toggleMenuPanel() {
+    this.isMenuPanelVisible = !this.isMenuPanelVisible;
   }
 
 }

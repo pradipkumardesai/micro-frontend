@@ -1,15 +1,23 @@
 <div>
   <img src="assets\images\wolters-kluwer-logo-large-dark.png" alt="">
 </div>
-<div class="card">
+<div>
   
   <div>
+    
     <nav class="navbar bg-primary-wkBlue-base p-0 wk-navbar-product-name">
+        <span class="wk-icon-filled wk-icon-filled-menu" style="color: white;font-size: 25px;padding-left: 10px;cursor:pointer;" (click)="toggleMenuPanel()"></span>
       <span class="navbar-text ml-auto bg-primary-wkGreen-base text-primary-wkWhite-base">
-        CCH Axcess </span>
+        Axcess </span>
     </nav>
+    <div *ngIf="isMenuPanelVisible" style="background-color: #F2F3F4;height:500px;width:700px;z-index: 1000;position: absolute;">
+      <app-app-links></app-app-links>
+    </div>
+    <div>
+      <h1>Test content</h1>
+    </div>
    
-    <div style="padding: 10px;">
+    <!-- <div style="padding: 10px;">
       <div style="display: flex;padding-bottom: 10px;">
         <div style="padding-top: 10px;"><a [routerLink]="['/', 'am']">Admin manager</a></div>
         <div style="margin-left: 10px;padding-top: 10px;"><a [routerLink]="['/', 'tax']">Tax</a></div>
@@ -23,7 +31,7 @@
     
        
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
