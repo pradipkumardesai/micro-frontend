@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MenuPanelService } from 'src/app/core/services/menu-panel/menu-panel.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-link-card',
@@ -8,11 +10,25 @@ import { Component, OnInit, Input } from '@angular/core';
 export class LinkCardComponent implements OnInit {
 
   @Input()
-  linkGroup:any;
-  
-  constructor() { }
+  linkGroup: any;
+
+  constructor(private router: Router, private menuPanelService: MenuPanelService) { }
 
   ngOnInit() {
+  }
+
+  linkClicked(ldDescription: string) {
+    switch (ldDescription) {
+      case "Staff Manager":
+      case "Client Manager":
+        this.router.navigate(['/', 'am']);
+        break;        
+      default:
+          this.router.navigate(['/', 'tax']);
+        break;
+    }
+   
+    this.menuPanelService.hidePanel();
   }
 
 }

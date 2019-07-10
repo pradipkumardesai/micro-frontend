@@ -4,6 +4,6 @@
   <ul style="list-style: none;">  
     <li *ngFor="let link of linkGroup.appLinks"> 
         <span class="commonglyphs"><span class="commonglyphs-arrow-right">&nbsp;</span></span>
-        <a href="">{{link.ldDescription}}</a>
+        <a (click)="linkClicked(link.ldDescription)" style="cursor:pointer;" >{{link.ldDescription}}</a>
   </ul>
 </div>
