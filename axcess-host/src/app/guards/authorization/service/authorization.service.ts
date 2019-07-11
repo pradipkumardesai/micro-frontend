@@ -17,7 +17,6 @@ export class AuthorizationService {
   }
 
   getModuleByName(moduleName: string): Module {
-    debugger;
     let moduleInfo: Module = null;
     modules.forEach(module => {
       if ("/" + module.moduleName === moduleName) {

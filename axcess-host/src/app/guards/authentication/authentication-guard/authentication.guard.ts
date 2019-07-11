@@ -11,7 +11,6 @@ export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router, private shellConfigService: ShellConfigService) { }
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    debugger;
     let authTokQuryPrmName = this.shellConfigService.getAuthTokQuryPrmName();
     let url: string = state.url;
     let authTok: string = next.queryParams[authTokQuryPrmName];

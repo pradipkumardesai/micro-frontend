@@ -21,7 +21,6 @@ export class AxcessShellComponent implements OnInit {
     });
 
     this.activatedRoute.params.subscribe((param) => {
-      debugger;
       this.appsConfigService.loadModule(param.id);
     });
   }

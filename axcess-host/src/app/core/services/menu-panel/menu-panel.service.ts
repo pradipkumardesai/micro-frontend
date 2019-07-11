@@ -13,7 +13,6 @@ export class MenuPanelService {
   }
 
   hidePanel() {
-    debugger;
     this.isPanelOpen.next(false);
   }
 
