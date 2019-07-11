@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import  modules from "../../../../assets/apps-configs.json";
+import modules from "../../../../assets/apps-configs.json";
 import { ElementLoaderService } from '../element-loader/element-loader.service.js';
 import { Module } from '../../models/module.model.js';
 

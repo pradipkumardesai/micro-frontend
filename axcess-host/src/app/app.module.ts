@@ -17,7 +17,7 @@ import { InterceptorService } from './core/services/interceptor/interceptor.serv
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpClientModule ,
+    HttpClientModule,
     CoreModule,
     SharedModule
   ],

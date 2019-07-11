@@ -1,29 +1,27 @@
-<div style="display: flex;">  
-  <div style="width: 25%;"><img src="assets\images\wolters-kluwer-logo-large-dark.png" alt=""></div>
-  <div style="width: 75%;">
-    <div style="float: right;padding-top: 30px;">
-        <button  class="btn btn-danger" (click)="doLogout()">Logout</button>
+<!-- brand logo -->
+<div class="wk-dv-flex">
+  <!-- logo -->
+  <div class="brand-logo-dv"><img src="assets\images\wolters-kluwer-logo-large-dark.png" alt=""></div>
+  <!-- logout button -->
+  <div class="btn-logout-dv">
+    <div class="btn-logout-dv-inner">
+      <button class="btn btn-danger" (click)="doLogout()">Logout</button>
     </div>
-    
   </div>
 </div>
+
 <div>
-  
-  <div>
-    
-    <nav class="navbar bg-primary-wkBlue-base p-0 wk-navbar-product-name">
-        <span class="commonglyphs  commonglyphs-home" style="color: white;font-size: 25px;padding-left: 10px;cursor:pointer;" (click)="goToDashboard()"></span>
-        <span class="wk-icon-filled wk-icon-filled-menu" style="color: white;font-size: 25px;padding-left: 10px;cursor:pointer;" (click)="toggleMenuPanel()"></span>
-      <span class="navbar-text ml-auto bg-primary-wkGreen-base text-primary-wkWhite-base">
-        Axcess </span>
-    </nav>
-    <div [hidden]="!isMenuPanelVisible" class="wk-card" style="background-color: #F2F3F4;height:auto;width:auto;z-index: 1000;position: absolute;">
-      <app-app-links></app-app-links>
-    </div>
-
-    <!-- child apps container -->
-    <div style="margin-top: 10px;padding: 10px;" id="content" class="content"></div>  
-      
+  <!-- nav bar -->
+  <nav class="navbar bg-primary-wkBlue-base p-0 wk-navbar-product-name">
+    <span class="commonglyphs  commonglyphs-home btn-home" (click)="goToDashboard()"></span>
+    <span class="wk-icon-filled wk-icon-filled-menu btn-menu" (click)="toggleMenuPanel()"></span>
+    <span class="navbar-text ml-auto bg-primary-wkGreen-base text-primary-wkWhite-base">
+      Axcess </span>
+  </nav>
+  <!-- link panel -->
+  <div [hidden]="!isMenuPanelVisible" class="wk-card menu-panel-container">
+    <app-app-links></app-app-links>
   </div>
+  <!-- child apps container -->
+  <div id="content" class="content child-app-container"></div>
 </div>
-

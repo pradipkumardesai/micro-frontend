@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MenuPanelService } from 'src/app/core/services/menu-panel/menu-panel.service';
 import { Router } from '@angular/router';
+
+import { MenuPanelService } from 'src/app/core/services/menu-panel/menu-panel.service';
+
 
 @Component({
   selector: 'app-link-card',
@@ -22,12 +24,11 @@ export class LinkCardComponent implements OnInit {
       case "Staff Manager":
       case "Client Manager":
         this.router.navigate(['/', 'am']);
-        break;        
+        break;
       default:
-          this.router.navigate(['/', 'tax']);
+        this.router.navigate(['/', 'tax']);
         break;
     }
-   
     this.menuPanelService.hidePanel();
   }
 

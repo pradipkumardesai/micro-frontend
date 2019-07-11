@@ -1,21 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'assets/master-css/wk-theme/assets/main';
-$font-path: 'assets/master-css/wk-theme/assets/fonts/';
+@import "assets/master-css/wk-theme/assets/main";
+$font-path: "assets/master-css/wk-theme/assets/fonts/";
 $icon-font-path: "assets/master-css/wk-theme/assets/fonts/bootstrap/";
 
-@import 'assets/master-css/wk-theme/assets/main';
+@import "assets/master-css/wk-theme/assets/main";
 
 .bg-primary-wkGreen-base {
-    background-color: #85bc20;
-    padding: 10px;
+  background-color: #85bc20;
+  padding: 10px;
 }
 
 .wk-card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    
-  }
-  
-  .wk-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.wk-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.wk-dv-flex {
+  display: flex;
+}

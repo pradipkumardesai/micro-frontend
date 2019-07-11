@@ -1,0 +1,39 @@
+.brand-logo-dv {
+  width: 25%;
+}
+
+.btn-logout-dv {
+  width: 75%;
+}
+
+.btn-logout-dv-inner {
+  float: right;
+  padding-top: 30px;
+}
+
+.btn-home {
+  color: white;
+  font-size: 25px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.btn-menu {
+  color: white;
+  font-size: 25px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.menu-panel-container {
+  background-color: #f2f3f4;
+  height: auto;
+  width: auto;
+  z-index: 1000;
+  position: absolute;
+}
+
+.child-app-container {
+  margin-top: 10px;
+  padding: 10px;
+}

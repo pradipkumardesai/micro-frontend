@@ -19,8 +19,8 @@ export class AuthGuard implements CanActivate {
 
     if (authTok) {
       this.authService.login(authTok);
-      if(localStorage.getItem("lastModuleId")){
-        this.router.navigateByUrl("/"+localStorage.getItem("lastModuleId"));
+      if (localStorage.getItem("lastModuleId")) {
+        this.router.navigateByUrl("/" + localStorage.getItem("lastModuleId"));
         return false;
       }
     }

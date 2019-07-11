@@ -9,20 +9,20 @@ export class AuthorizationGuard implements CanActivate {
 
   constructor(private authService: AuthorizationService, private router: Router) { }
 
-  canActivate(    
+  canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
-        
+
     let url: string = state.url;
     let hasPerm: boolean = this.authService.hasPermission(url);
-   
+
     if (hasPerm)
       return true;
-    else{
+    else {
       this.router.navigate(['/unauth']);
       return false;
     }
-     
+
   }
 
 }
