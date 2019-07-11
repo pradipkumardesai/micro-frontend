@@ -13,9 +13,9 @@
         "allowed": false
     },
     {
-        "moduleName": "login",
-        "url": "http://fam-dev-vm1.eastus.cloudapp.azure.com/axcess-identity/axcess-identity.all.js",
-        "elementName": "axcess-identity",
+        "moduleName": "dashboard",
+        "url": "http://fam-dev-vm1.eastus.cloudapp.azure.com/AxcessDashboard/axcess-dashboard.all.js",
+        "elementName": "axcess-dashboard",
         "allowed": true
     }
 ]

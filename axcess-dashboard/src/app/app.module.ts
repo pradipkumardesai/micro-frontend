@@ -12,7 +12,7 @@ import { AppComponentTax } from './app.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponentTax],
+  bootstrap: [],
   entryComponents: [
     AppComponentTax
   ],
@@ -27,8 +27,8 @@ export class AppModule {
   ngDoBootstrap() {
     console.log(`In Tax ngDoBootstrap`);
     const appElement = createCustomElement(AppComponentTax, { injector: this.injector})
-    if(!customElements.get('app-dashboard'))
-    customElements.define('app-dashboard', appElement);   
+    if(!customElements.get('axcess-dashboard'))
+    customElements.define('axcess-dashboard', appElement);   
   }
 
 }

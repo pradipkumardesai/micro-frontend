@@ -4,13 +4,13 @@ const concat = require('concat');
 (async function build() {
 
     const files = [
-        './dist/axcess-tax/runtime.js',
-        './dist/axcess-tax/main.js'
+        './dist/axcess-dashboard/runtime.js',
+        './dist/axcess-dashboard/main.js'
     ]
 
     await fs.ensureDir('angularElements')
 
-    await concat(files, 'angularElements/axcess-tax.all.js')
+    await concat(files, 'angularElements/axcess-dashboard.all.js')
     console.info('Angular Elements created successfully!')
 
 })()
