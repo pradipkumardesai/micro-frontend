@@ -23,4 +23,19 @@ describe('AuthService', () => {
     const service: AuthService = TestBed.get(AuthService);
     expect(service).toBeTruthy();
   });
+
+  it('isLoggedIn should return false', () => {
+    const service: AuthService = TestBed.get(AuthService);
+    service.logout();
+    expect(service.isLoggedIn()).toEqual(false);
+  });
+
+  it('isLoggedIn should return true', () => {
+    const service: AuthService = TestBed.get(AuthService);   
+    service.login("Token");
+    expect(service.isLoggedIn()).toEqual(true);
+    service.logout();
+    expect(service.isLoggedIn()).toEqual(false);
+  });
+
 });
