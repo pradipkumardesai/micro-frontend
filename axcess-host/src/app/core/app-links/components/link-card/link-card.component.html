@@ -8,7 +8,7 @@
   <ul class="shell-link-card-lst-sty-none">
     <li *ngFor="let link of linkGroup.appLinks">
       <span class="commonglyphs"><span class="commonglyphs-arrow-right">&nbsp;</span></span>
-      <a (click)="linkClicked(link.ldDescription)" style="cursor:pointer;">{{link.ldDescription}}</a>
+      <a (click)="linkClicked(link)" style="cursor:pointer;">{{link.ldDescription}}</a>
   </ul>
 
 </div>

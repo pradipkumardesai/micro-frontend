@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import * as CoreActions from "src/app/core/state/core.actions";
+import { Link } from '../../models/link.model';
+import { LinkGroup } from '../../models/link-group.model';
 
 @Component({
   selector: 'app-link-card',
@@ -11,15 +13,19 @@ import * as CoreActions from "src/app/core/state/core.actions";
 export class LinkCardComponent implements OnInit {
 
   @Input()
-  linkGroup: any;
+  linkGroup: LinkGroup;
 
   constructor(private router: Router, private store: Store<any>) { }
 
   ngOnInit() {
   }
 
-  linkClicked(ldDescription: string) {
-    switch (ldDescription) {
+  linkClicked(link: Link) {
+    switch (link.ldDescription) {
+      case "New engagement":
+      case "Recent engagements":
+        window.open(link.ldWebPageLink, '_blank');
+        break;
       case "Staff Manager":
       case "Client Manager":
         this.router.navigate(['/', 'am']);

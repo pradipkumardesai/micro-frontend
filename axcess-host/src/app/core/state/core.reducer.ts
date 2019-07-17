@@ -1,5 +1,6 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { CoreActions, CoreActionTypes } from './core.actions';
+import { LinkGroup } from '../app-links/models/link-group.model';
 
 export function reducer(state: CoreState = initialCoreState, action: CoreActions): CoreState {
 
@@ -23,7 +24,7 @@ export function reducer(state: CoreState = initialCoreState, action: CoreActions
 
 export interface CoreState {
     isMenuPanelOpen: boolean;
-    appLinks: any[];
+    appLinks: LinkGroup[];
 }
 
 const initialCoreState: CoreState = {
