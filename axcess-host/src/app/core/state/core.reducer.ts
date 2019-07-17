@@ -1,9 +1,10 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { CoreActions, CoreActionTypes } from './core.actions';
 
-export function reducer(state: CoreState = initialCoreState, action): CoreState {
+export function reducer(state: CoreState = initialCoreState, action: CoreActions): CoreState {
 
     switch (action.type) {
-        case "IS_MENU_PANEL_OPEN":
+        case CoreActionTypes.ToggleMenuPanelFlag:
             return {
                 ...state,
                 isMenuPanelOpen: action.payload
@@ -23,4 +24,4 @@ const initialCoreState: CoreState = {
 
 const getCoreState = createFeatureSelector<CoreState>("core");
 
-export const getMenuPanelFlag = createSelector(getCoreState,state=> state.isMenuPanelOpen);
+export const getMenuPanelFlag = createSelector(getCoreState, state => state.isMenuPanelOpen);

@@ -4,7 +4,8 @@ import { AppsConfigService } from '../../services/apps-config/apps-config.servic
 import { AuthService } from 'src/app/guards/authentication/authentication-service/auth.service';
 import { Store, select } from '@ngrx/store';
 import { AppState } from 'src/app/state/app.state';
-import * as fromCoreRedurec from "src/app/core/state/app.reducer";
+import * as fromCoreRedurec from "src/app/core/state/core.reducer";
+import * as CoreActions from "src/app/core/state/core.actions";
 
 @Component({
   selector: 'app-axcess-shell',
@@ -34,7 +35,7 @@ export class AxcessShellComponent implements OnInit {
   }
 
   toggleMenuPanel() {
-    this.store.dispatch({ type: 'IS_MENU_PANEL_OPEN', payload: !this.isMenuPanelVisible });
+    this.store.dispatch(new CoreActions.ToggleMenuPanelFlag(!this.isMenuPanelVisible));
   }
 
   goToDashboard() {
