@@ -10,12 +10,10 @@ export function reducer(state: CoreState = initialCoreState, action: CoreActions
                 ...state,
                 isMenuPanelOpen: action.payload
             }
-            break;
         case CoreActionTypes.LoadAppLinksSuccess:
             return {
                 ...state,
                 appLinks: action.payload
-            
             }
         default:
             return state;
@@ -35,6 +33,5 @@ const initialCoreState: CoreState = {
 const getCoreState = createFeatureSelector<CoreState>("core");
 
 export const getMenuPanelFlag = createSelector(getCoreState, state => state.isMenuPanelOpen);
-
 
 export const getAppLinks = createSelector(getCoreState, state => state.appLinks);

@@ -8,19 +8,20 @@ import { LinkGroup } from '../app-links/models/link-group.model';
 @Injectable()
 export class AppLinksEffect {
 
-    constructor(private actions: Actions, private appLinkService: AppLinkService) {
-        console.log("AppLinksEffect > constructor");
-    }
+    constructor(private actions: Actions, private appLinkService: AppLinkService) { }
 
     @Effect()
-    loadLinks = this.actions.pipe(ofType(coreActions.CoreActionTypes.LoadAppLinks), mergeMap(
+    loadLinks = this.actions.pipe(
 
-        (action: coreActions.LoadAppLinks) => this.appLinkService.getLinks().pipe(
+        ofType(coreActions.CoreActionTypes.LoadAppLinks),
+        mergeMap(
 
-            map((links: LinkGroup[]) => new coreActions.LoadAppLinksSuccess(links))
+            (action: coreActions.LoadAppLinks) => this.appLinkService.getLinks().pipe(
 
-        )
+                map((links: Array<LinkGroup>) => new coreActions.LoadAppLinksSuccess(links))
 
-    ))
+            )
+
+        ))
 
 }
