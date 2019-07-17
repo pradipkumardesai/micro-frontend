@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-
-import { MenuPanelService } from 'src/app/core/services/menu-panel/menu-panel.service';
-
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-link-card',
@@ -14,7 +12,7 @@ export class LinkCardComponent implements OnInit {
   @Input()
   linkGroup: any;
 
-  constructor(private router: Router, private menuPanelService: MenuPanelService) { }
+  constructor(private router: Router,private store: Store<any>) { }
 
   ngOnInit() {
   }
@@ -29,7 +27,7 @@ export class LinkCardComponent implements OnInit {
         this.router.navigate(['/', 'tax']);
         break;
     }
-    this.menuPanelService.hidePanel();
+    this.store.dispatch({ type: 'TOGGLE_SHOW_NAME', payload: false });
   }
 
 }

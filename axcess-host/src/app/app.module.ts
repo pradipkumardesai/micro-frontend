@@ -5,6 +5,9 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { routes } from './app.route.module';
+
+import { StoreModule } from "@ngrx/store";
+
 import { SharedModule } from './shared/shared.module';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -17,6 +20,7 @@ import { InterceptorService } from './core/services/interceptor/interceptor.serv
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    StoreModule.forRoot({}),
     HttpClientModule,
     CoreModule,
     SharedModule
