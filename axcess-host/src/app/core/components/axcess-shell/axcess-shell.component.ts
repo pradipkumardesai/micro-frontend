@@ -4,6 +4,7 @@ import { AppsConfigService } from '../../services/apps-config/apps-config.servic
 import { AuthService } from 'src/app/guards/authentication/authentication-service/auth.service';
 import { Store, select } from '@ngrx/store';
 import { AppState } from 'src/app/state/app.state';
+import * as fromCoreRedurec from "src/app/core/state/app.reducer";
 
 @Component({
   selector: 'app-axcess-shell',
@@ -18,9 +19,8 @@ export class AxcessShellComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.store.pipe(select("core")).subscribe(data => {
-      if (data)
-        this.isMenuPanelVisible = data.isMenuPanelOpen;
+    this.store.pipe(select(fromCoreRedurec.getMenuPanelFlag)).subscribe(isMenuPanelOpen => {
+      this.isMenuPanelVisible = isMenuPanelOpen;
     });
 
     this.activatedRoute.params.subscribe((param) => {
