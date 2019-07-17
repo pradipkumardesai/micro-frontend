@@ -9,6 +9,13 @@ export function reducer(state: CoreState = initialCoreState, action: CoreActions
                 ...state,
                 isMenuPanelOpen: action.payload
             }
+            break;
+        case CoreActionTypes.LoadAppLinksSuccess:
+            return {
+                ...state,
+                appLinks: action.payload
+            
+            }
         default:
             return state;
     }
@@ -16,12 +23,17 @@ export function reducer(state: CoreState = initialCoreState, action: CoreActions
 
 export interface CoreState {
     isMenuPanelOpen: boolean;
+    appLinks: any[];
 }
 
 const initialCoreState: CoreState = {
-    isMenuPanelOpen: false
+    isMenuPanelOpen: false,
+    appLinks: []
 }
 
 const getCoreState = createFeatureSelector<CoreState>("core");
 
 export const getMenuPanelFlag = createSelector(getCoreState, state => state.isMenuPanelOpen);
+
+
+export const getAppLinks = createSelector(getCoreState, state => state.appLinks);

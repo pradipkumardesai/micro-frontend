@@ -7,6 +7,8 @@ import { ElementLoaderService } from './services/element-loader/element-loader.s
 import { AppLinksModule } from './app-links/app-links.module';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './state/core.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { AppLinksEffect } from './state/core.effects';
 
 
 @NgModule({
@@ -15,6 +17,7 @@ import { reducer } from './state/core.reducer';
     CommonModule,
     RouterModule,
     StoreModule.forFeature('core',reducer),
+    EffectsModule.forFeature([AppLinksEffect]),
     AppLinksModule
   ],
   providers: [ElementLoaderService],
