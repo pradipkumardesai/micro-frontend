@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AppsConfigService } from '../../services/apps-config/apps-config.service';
 import { AuthService } from 'src/app/guards/authentication/authentication-service/auth.service';
 import { Store, select } from '@ngrx/store';
+import { AppState } from 'src/app/state/app.state';
 
 @Component({
   selector: 'app-axcess-shell',
@@ -13,13 +14,13 @@ export class AxcessShellComponent implements OnInit {
   title = 'axcess-host';
   isMenuPanelVisible: boolean = false;
 
-  constructor(private store: Store<any>, private route: Router, private authService: AuthService, private activatedRoute: ActivatedRoute, private appsConfigService: AppsConfigService) { }
+  constructor(private store: Store<AppState>, private route: Router, private authService: AuthService, private activatedRoute: ActivatedRoute, private appsConfigService: AppsConfigService) { }
 
   ngOnInit(): void {
-   
+
     this.store.pipe(select("core")).subscribe(data => {
       if (data)
-        this.isMenuPanelVisible = data.showName;
+        this.isMenuPanelVisible = data.isMenuPanelOpen;
     });
 
     this.activatedRoute.params.subscribe((param) => {
@@ -33,7 +34,7 @@ export class AxcessShellComponent implements OnInit {
   }
 
   toggleMenuPanel() {
-    this.store.dispatch({ type: 'TOGGLE_SHOW_NAME', payload: !this.isMenuPanelVisible });
+    this.store.dispatch({ type: 'IS_MENU_PANEL_OPEN', payload: !this.isMenuPanelVisible });
   }
 
   goToDashboard() {

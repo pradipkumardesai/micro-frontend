@@ -1,13 +1,20 @@
-export function reducer(state, action) {
-    
+export function reducer(state: CoreState = initialCoreState, action): CoreState {
+
     switch (action.type) {
-        case "TOGGLE_SHOW_NAME":
+        case "IS_MENU_PANEL_OPEN":
             return {
                 ...state,
-                showName: action.payload
+                isMenuPanelOpen: action.payload
             }
-
         default:
             return state;
     }
+}
+
+export interface CoreState {
+    isMenuPanelOpen: boolean;
+}
+
+const initialCoreState: CoreState = {
+    isMenuPanelOpen: false
 }

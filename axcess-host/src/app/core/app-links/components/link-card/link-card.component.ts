@@ -27,7 +27,7 @@ export class LinkCardComponent implements OnInit {
         this.router.navigate(['/', 'tax']);
         break;
     }
-    this.store.dispatch({ type: 'TOGGLE_SHOW_NAME', payload: false });
+    this.store.dispatch({ type: 'IS_MENU_PANEL_OPEN', payload: false });
   }
 
 }
