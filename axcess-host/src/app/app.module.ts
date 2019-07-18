@@ -14,6 +14,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './core/services/interceptor/interceptor.service';
 import { EffectsModule } from '@ngrx/effects';
 import { AppLinksEffect } from './core/state/core.effects';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AppLinksEffect } from './core/state/core.effects';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     HttpClientModule,
+    NgbModule,
     CoreModule,
     SharedModule
   ],

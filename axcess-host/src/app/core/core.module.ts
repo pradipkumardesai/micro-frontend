@@ -9,18 +9,21 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from './state/core.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { AppLinksEffect } from './state/core.effects';
+import { AlertComponent } from './components/alert/alert.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
-  declarations: [AxcessShellComponent],
+  declarations: [AxcessShellComponent, AlertComponent],
   imports: [
     CommonModule,
     RouterModule,
     StoreModule.forFeature('core',reducer),
     EffectsModule.forFeature([AppLinksEffect]),
+    NgbModule,
     AppLinksModule
   ],
   providers: [ElementLoaderService],
-  exports: [AxcessShellComponent]
+  exports: [AxcessShellComponent,AlertComponent]
 })
 export class CoreModule { }

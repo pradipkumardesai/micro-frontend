@@ -46,3 +46,75 @@ $icon-font-path: "assets/master-css/wk-theme/assets/fonts/bootstrap/";
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+
+
+.close {
+  float: right !important;
+  font-size: 1.5rem !important;
+  font-weight: 300 !important;
+  line-height: 1 !important;
+  color: $wk-primary-black !important;
+  text-shadow: 0 1px 0 $wk-primary-white !important;
+  opacity: .5 !important;
+}
+
+.alert {
+  position: relative !important;
+  padding: 0.75rem 1.25rem !important;
+  margin-bottom: 1rem !important;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  padding: 0.75rem 2.5rem 0.75rem 1.25rem !important;
+}
+
+.alert-success {
+  background-color: $wk-primary-white !important;
+  border-color: $wk-secondary-green !important;
+  color: $wk-secondary-green !important;
+}
+
+.alert-info {
+  background-color: $wk-primary-white !important;
+  border-color: $wk-primary-blue !important;
+  color: $wk-primary-blue !important;
+}
+
+.alert-warning {
+  background-color: $wk-primary-white !important;
+  border-color: $wk-secondary-orange !important;
+  color: $wk-secondary-orange !important;
+}
+
+.alert-danger {
+  background-color: $wk-primary-white !important;
+  border-color: $wk-primary-red !important;
+  color: $wk-primary-red !important;
+}
+
+.alert {
+  -webkit-box-shadow: 3px 3px 5px 0px #999 !important;
+  -moz-box-shadow: 3px 3px 5px 0px #999 !important;
+  box-shadow: 3px 3px 5px 0px #999 !important;
+}
+
+.alert-dismissible .close {
+  top: 50% !important;
+  padding: 0.75rem 1.125rem !important;
+  transform: translateY(-50%) !important;
+}
+
+.close:focus {
+  outline: none;
+}
+
+.close span:hover {
+  color: black;
+}
+
+.alert-container {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 999999;
+}
