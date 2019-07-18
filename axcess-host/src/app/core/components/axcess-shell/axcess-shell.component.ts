@@ -39,6 +39,7 @@ export class AxcessShellComponent implements OnInit {
   }
 
   goToDashboard() {
+    this.store.dispatch(new CoreActions.ToggleMenuPanelFlag(false));
     this.route.navigate(["/", "dashboard"]);
   }
 
