@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpInterceptor } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { ShellConfigService } from '../shell-config/shell-config.service';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
+import { AlertService } from '../alert/alert.service';
+import { AlertType } from '../../models/alert.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,10 +21,17 @@ export class InterceptorService implements HttpInterceptor {
         Authorization: 'Bearer ' + this.authId
       }
     });
-    return next.handle(request);
+    return next.handle(request).pipe(
+
+      catchError((err:any)=>{
+        this.alertService.addAlert("Could not connect to service. Please logout and login again",AlertType.Danger);
+        return throwError("");
+      })
+
+    );
   }
 
-  constructor(private cookieService: CookieService, private shellConfigService: ShellConfigService) {
+  constructor(private cookieService: CookieService, private shellConfigService: ShellConfigService,private alertService:AlertService) {
     this.AUTH_ID = this.shellConfigService.getAuthCookieName();
     this.authId = this.cookieService.get(this.AUTH_ID)
   }
