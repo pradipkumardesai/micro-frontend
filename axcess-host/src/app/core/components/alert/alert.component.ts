@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertService } from '../../services/alert/alert.service';
+import { Alert, AlertType } from '../../models/alert.model';
 
 @Component({
   selector: 'app-alert',
@@ -7,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlertComponent implements OnInit {
 
-  constructor() { }
+  alerts: Array<Alert> = [];
+  constructor(private alertService: AlertService) { }
 
   ngOnInit() {
+    this.alerts = this.alertService.alerts;
   }
 
-  closeAlert(){}
+  closeAlert(alert:Alert) { 
+    this.alertService.removeAlert(alert);
+  }
 }
