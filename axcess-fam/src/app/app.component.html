@@ -1,17 +1,32 @@
-<!-- <div style="border:1px solid green; padding: 10px;">
-  <h1>Axcess admin manager</h1>
-  <div style="display: flex;padding: 10px;">
-    <div style="padding: 5px;"><a [routerLink]="['/staff']">Staff</a></div>
-    <div style="padding: 5px;"><a [routerLink]="['/client']">Client</a></div>
-  </div>
-  <div style="padding: 10px;margin: 10px;">
-    <router-outlet></router-outlet>
-  </div>
-</div>
- -->
- <div style="margin: 0 auto; width: 100%;margin-top: 300px;">
-  <div style="padding: 10px;margin: 0 auto; width:450px;">
-      <h1>Axcess Client Manager</h1>
+<div>
+  <div class="container-fluid">
+    <div class="card">
+      <div style="padding: 10px;margin: 0 auto; width:400px;">
+        <h1>Firm Mailing lists</h1>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <table class="table table-hover wk-borderless">
+              <thead>
+                <tr>
+                  <th>NAME</th>
+                  <th>OLD NAME</th>
+                  <th>GUID</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="mailingLists">
+                <tr *ngFor="let list of mailingLists.firmMailingListInfo">
+                  <td style="width: 30%;">{{list.name}}</td>
+                  <td style="width: 30%; ">{{list.oldName}}</td>
+                  <td style="width: 30%; ">{{list.firmMailingListGuid}}</td>
+                </tr>
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 </div>

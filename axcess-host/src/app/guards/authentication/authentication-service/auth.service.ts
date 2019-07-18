@@ -13,6 +13,10 @@ export class AuthService {
     this.AUTH_ID = this.shellConfigService.getAuthCookieName();
   }
 
+  getToken(): string {
+    return 'Bearer ' + this.cookieService.get(this.AUTH_ID);
+  }
+
   isLoggedIn(): boolean {
     let autId: string = this.cookieService.get(this.AUTH_ID)
 

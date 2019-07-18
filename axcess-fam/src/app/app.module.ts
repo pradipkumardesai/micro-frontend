@@ -6,6 +6,7 @@ import { RouterModule,Route } from "@angular/router";
 import { AppComponent } from './app.component';
 import { ClientManagerComponent } from './components/client-manager/client-manager.component';
 import { StaffManagerComponent } from './components/staff-manager/staff-manager.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StaffManagerComponent } from './components/staff-manager/staff-manager.
     RouterModule.forRoot([
       { path: "staff", component: StaffManagerComponent },
       { path: "client", component: ClientManagerComponent }
-    ])
+    ]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [],
