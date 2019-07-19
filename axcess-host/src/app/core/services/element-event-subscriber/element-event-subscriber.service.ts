@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { AlertService } from '../alert/alert.service';
+import { ModalBasicService } from '../modal-basic/modal-basic.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ElementEventSubscriberService {
 
-  constructor(private alertService: AlertService) { }
+  constructor(private alertService: AlertService,private modalBasicService: ModalBasicService) { }
 
   handleEvent(eventData) {
     let event = eventData.detail;
@@ -18,7 +19,7 @@ export class ElementEventSubscriberService {
         this.alertService.addAlert(event.eventData.message, event.eventData.alertType)
         break;
       case "modal":
-        this.alertService.addAlert(event.eventData.message, event.eventData.alertType)
+        this.modalBasicService.open();
         break;
       default:
         break;

@@ -27,4 +27,14 @@ export class AppComponentTax implements OnInit {
     });
   }
 
+  showModal(){
+    this.ShellEvent.emit({
+      eventType: "modal",
+      eventData: {
+        alertType: "success",
+        message: "Hello from dashboard app"
+      }
+    });
+  }
+
 }
