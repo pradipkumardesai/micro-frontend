@@ -7,20 +7,24 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 })
 export class AppComponentTax implements OnInit {
   ngOnInit(): void {
-    console.log("shellevent ...")
-    this.onShellevent.emit("hello");
+
   }
   title = 'app-dashboard';
 
   @Input()
-  content:any;
+  content: any;
 
-  @Output() 
-  onShellevent: EventEmitter<string> = new EventEmitter<string>();
+  @Output()
+  ShellEvent: EventEmitter<any> = new EventEmitter<any>();
 
-  sendMess(){
-    console.log("sendMess ...")
-    this.onShellevent.emit("hello");
+  sendMess() {
+    this.ShellEvent.emit({
+      eventType: "alert",
+      eventData: {
+        alertType: "success",
+        message: "Hello from dashboard app"
+      }
+    });
   }
-  
+
 }
