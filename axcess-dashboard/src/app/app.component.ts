@@ -1,11 +1,15 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponentTax implements OnInit {
+export class AppComponentTax implements OnInit, OnChanges {
+
+  ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
+    console.log("ngOnChanges" + JSON.stringify(changes));
+  }
   ngOnInit(): void {
 
   }
@@ -15,7 +19,10 @@ export class AppComponentTax implements OnInit {
   content: any;
 
   @Output()
-  ShellEvent: EventEmitter<any> = new EventEmitter<any>();
+  ShellEvent: EventEmitter<any> = new EventEmitter<any>();//EventFromShell
+
+  @Input()
+  eventfromshell: any;
 
   sendMess() {
     this.ShellEvent.emit({
@@ -27,7 +34,7 @@ export class AppComponentTax implements OnInit {
     });
   }
 
-  showModal(){
+  showModal() {
     this.ShellEvent.emit({
       eventType: "modal",
       eventData: {

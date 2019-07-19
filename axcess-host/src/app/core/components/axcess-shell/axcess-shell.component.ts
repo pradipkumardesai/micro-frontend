@@ -6,6 +6,7 @@ import { Store, select } from '@ngrx/store';
 import { AppState } from 'src/app/state/app.state';
 import * as fromCoreRedurec from "src/app/core/state/core.reducer";
 import * as CoreActions from "src/app/core/state/core.actions";
+import { ElementEventPublisherService } from '../../services/element-event-publisher/element-event-publisher.service';
 
 @Component({
   selector: 'app-axcess-shell',
@@ -16,8 +17,8 @@ export class AxcessShellComponent implements OnInit {
   title = 'axcess-host';
   isMenuPanelVisible: boolean = false;
 
-  constructor(private store: Store<AppState>, private route: Router, private authService: AuthService, private activatedRoute: ActivatedRoute, private appsConfigService: AppsConfigService) { }
-
+  constructor(private elementEventPublisherService: ElementEventPublisherService, private store: Store<AppState>, private route: Router, private authService: AuthService, private activatedRoute: ActivatedRoute, private appsConfigService: AppsConfigService) { }
+ 
   ngOnInit(): void {
 
     this.store.pipe(select(fromCoreRedurec.getMenuPanelFlag)).subscribe(isMenuPanelOpen => {
