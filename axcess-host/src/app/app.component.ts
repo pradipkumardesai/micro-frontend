@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalBasicService } from './core/services/modal-basic/modal-basic.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +7,6 @@ import { ModalBasicService } from './core/services/modal-basic/modal-basic.servi
 })
 export class AppComponent {
 
-  constructor(private ser: ModalBasicService) { }
-  
+  constructor() { }
+
 }

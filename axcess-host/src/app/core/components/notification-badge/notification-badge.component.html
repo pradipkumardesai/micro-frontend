@@ -1,0 +1,21 @@
+<div class="badge-with-icon" style="margin-right: 10px;cursor: pointer;" (click)="showNotifications()" placement="bottom"
+[ngbPopover]="popContent" popoverTitle="Notifications">
+    <span class="commonglyphs commonglyphs-alert"></span>
+    <span *ngIf="unreadNotificationCount" class="alert-count" (click)="showNotifications()">{{unreadNotificationCount}}</span>
+  </div>
+  <ng-template #popContent>
+    <div *ngIf="notifications.length; else norecords">
+        <div  *ngFor="let notification of notifications" class="wk-dv-flex" style="margin: 0px 5px;">
+          <div style="padding: 5px;color: blue;">{{notification.senderAppName}}</div>
+          <div style="padding: 5px;">{{notification.notificationText}}</div>
+            
+          </div>
+    </div>
+   
+  </ng-template>
+
+  <ng-template #norecords>
+      <p style="color: red;"> No notifications</p>
+   </ng-template>
+ 
+ 

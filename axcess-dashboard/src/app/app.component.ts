@@ -8,7 +8,7 @@ import { Component, Input, Output, EventEmitter, OnInit, OnChanges } from '@angu
 export class AppComponentTax implements OnInit, OnChanges {
 
   ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
-    console.log("ngOnChanges" + JSON.stringify(changes));
+   
   }
   ngOnInit(): void {
 
@@ -40,6 +40,16 @@ export class AppComponentTax implements OnInit, OnChanges {
       eventData: {
         alertType: "success",
         message: "Hello from dashboard app"
+      }
+    });
+  }
+
+  sendNotification(){
+    this.ShellEvent.emit({
+      eventType: "notification",
+      eventData: {
+        senderAppName: "Dashboard",
+        notificationText: "Hello from dashboard app"
       }
     });
   }

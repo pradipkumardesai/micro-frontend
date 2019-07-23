@@ -13,10 +13,11 @@ import { AlertComponent } from './components/alert/alert.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalBasicComponent } from './components/modal-basic/modal-basic.component';
 import { ModalSlideComponent } from './components/modal-slide/modal-slide.component';
+import { NotificationBadgeComponent } from './components/notification-badge/notification-badge.component';
 
 
 @NgModule({
-  declarations: [AxcessShellComponent, AlertComponent, ModalBasicComponent, ModalSlideComponent],
+  declarations: [AxcessShellComponent, AlertComponent, ModalBasicComponent, ModalSlideComponent, NotificationBadgeComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -26,6 +27,6 @@ import { ModalSlideComponent } from './components/modal-slide/modal-slide.compon
     AppLinksModule
   ],
   providers: [ElementLoaderService],
-  exports: [AxcessShellComponent, AlertComponent, ModalBasicComponent, ModalSlideComponent]
+  exports: [AxcessShellComponent, AlertComponent, ModalBasicComponent, ModalSlideComponent,NotificationBadgeComponent]
 })
 export class CoreModule { }

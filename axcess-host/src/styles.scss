@@ -118,3 +118,35 @@ $icon-font-path: "assets/master-css/wk-theme/assets/fonts/bootstrap/";
   top: 20px;
   z-index: 999999;
 }
+
+.btn-primary .badge {
+  color: #007ac3;
+  background-color: #fff;
+  font-weight: 400;
+}
+
+.badge {
+  color: #fff;
+  background-color: $wk-primary-gray-tint1;
+  font-weight: 400;
+}
+
+.badge-with-icon {
+  font-size: 20px;
+ 
+
+  .alert-count {
+    position: absolute;
+    background-color: red;
+    font-size: 10px;
+    line-height: 15px;
+    color: #fff;
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 400;
+    margin-left: -12px;
+  }
+}
