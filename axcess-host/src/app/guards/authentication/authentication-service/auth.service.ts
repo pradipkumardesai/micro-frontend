@@ -32,6 +32,7 @@ export class AuthService {
 
   logout() {
     this.cookieService.delete(this.AUTH_ID);
+    localStorage.removeItem("lastModuleId");
     window.location.href = this.shellConfigService.getAuthServerURL();;
   }
 }

@@ -11,6 +11,7 @@ export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router, private shellConfigService: ShellConfigService) { }
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    debugger;
     let authTokQuryPrmName = this.shellConfigService.getAuthTokQuryPrmName();
     let url: string = state.url;
     let authTok: string = next.queryParams[authTokQuryPrmName];
@@ -20,6 +21,10 @@ export class AuthGuard implements CanActivate {
       this.authService.login(authTok);
       if (localStorage.getItem("lastModuleId")) {
         this.router.navigateByUrl("/" + localStorage.getItem("lastModuleId"));
+        return false;
+      }
+      else{
+        this.router.navigateByUrl("/dashboard");
         return false;
       }
     }
