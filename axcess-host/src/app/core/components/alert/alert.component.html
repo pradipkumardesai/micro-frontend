@@ -1,5 +1,7 @@
 <div class="alert-container">
   <p *ngFor="let alert of alerts">
-    <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{alert.message}}</ngb-alert>
+    <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">
+      <span style="font-weight: bold;">{{alert.senderAppName }}</span> <span style="margin: 0px 2px;">:</span> <span>{{alert.message}}</span>
+    </ngb-alert>
   </p>
 </div>

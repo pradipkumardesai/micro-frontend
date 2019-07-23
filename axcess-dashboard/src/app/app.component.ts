@@ -35,6 +35,7 @@ export class AppComponentTax implements OnInit, OnChanges {
     this.ShellEvent.emit({
       eventType: "alert",
       eventData: {
+        senderAppName: "Dashboard",
         alertType: "success",
         message: "Hello from dashboard app"
       }

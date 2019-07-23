@@ -1,4 +1,5 @@
 export class Alert {
+    senderAppName:string;
     message: string;
     type: AlertType
 }

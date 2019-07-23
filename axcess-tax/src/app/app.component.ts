@@ -35,6 +35,7 @@ export class AppComponentTax {
     this.ShellEvent.emit({
       eventType: "alert",
       eventData: {
+        senderAppName: "Tax",
         alertType: "success",
         message: "Hello from Tax"
       }

@@ -12,8 +12,8 @@ export class AlertService {
   constructor() {
   }
 
-  addAlert(message: string, alertType: AlertType) {
-    this.alerts.push({ message: message, type: alertType })
+  addAlert(alert:Alert) {
+    this.alerts.push(alert)
   }
 
   removeAlert(alert:Alert){
