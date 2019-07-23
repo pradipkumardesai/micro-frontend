@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { NgbModal, ModalDismissReasons, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { ModalBasicService } from '../../services/modal-basic/modal-basic.service';
+import { ModalBasic } from '../../models/modal-basic.model';
 
 @Component({
   selector: 'app-modal-basic',
@@ -10,11 +11,13 @@ import { ModalBasicService } from '../../services/modal-basic/modal-basic.servic
 export class ModalBasicComponent implements OnInit {
 
   @ViewChild("content") modalContent: TemplateRef<any>;
+  modalData: ModalBasic = new ModalBasic();
 
   ngOnInit(): void {
     this.modalBasicService.modalStatus.subscribe(modalStatus => {
       if (modalStatus)
         this.open(this.modalContent)
+        this.modalData = this.modalBasicService.modalData;
     });
   }
 
@@ -51,10 +54,10 @@ export class ModalBasicComponent implements OnInit {
     // call open function modal instance to open the modal with given properties
     this.modalService.open(content, { centered: true }).result.then((result) => {
       // this function is called when close function of modal instance is called
-      this.modalBasicService.close();
+      this.modalBasicService.close('closed');
       this.closeResult = `Closed with:`;
     }, (reason) => {
-      this.modalBasicService.close();
+      this.modalBasicService.close('Dismissed');
       // this function is called when dismiss function of modal instance is called
       this.closeResult = `Dismissed`;
     });

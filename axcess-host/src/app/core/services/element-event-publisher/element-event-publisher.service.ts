@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ElementEventPublish } from '../../models/element-event-publish.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class ElementEventPublisherService {
     this.element = element;
   }
 
-  sendEvent() { 
-    this.element.setAttribute('eventfromshell','Hello from shell');
+  sendEvent(elementEventPublish: ElementEventPublish) {
+    this.element.setAttribute('eventfromshell', JSON.stringify(elementEventPublish));
   }
 }

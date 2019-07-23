@@ -9,9 +9,9 @@ import { ElementEventPublisherService } from '../element-event-publisher/element
 export class ElementLoaderService {
 
   constructor(
-    private authService: AuthService, 
+    private authService: AuthService,
     private elementEventSubscriberService: ElementEventSubscriberService,
-    private elementEventPublisherService:ElementEventPublisherService) { }
+    private elementEventPublisherService: ElementEventPublisherService) { }
 
   load(url: string, dvName: string, elName: string): void {
     const content = document.getElementById(dvName);
@@ -20,11 +20,11 @@ export class ElementLoaderService {
     script.src = url;
     script.onload = this.onScriptLoaded;
     content.appendChild(script);
-    const webAppElement:HTMLElement = document.createElement(elName)
+    const webAppElement: HTMLElement = document.createElement(elName)
     this.elementEventPublisherService.setElementRef(webAppElement);
     webAppElement.setAttribute('state', 'init');
     webAppElement.setAttribute('content', JSON.stringify({ authToken: this.authService.getToken() }));
-    webAppElement.setAttribute('eventfromshell','Test');
+    webAppElement.setAttribute('eventfromshell', 'default');
     webAppElement.addEventListener("ShellEvent", this.onShelleEvent.bind(this));
     content.appendChild(webAppElement);
   }

@@ -8,12 +8,19 @@ import { Component, Input, Output, EventEmitter, OnInit, OnChanges } from '@angu
 export class AppComponentTax implements OnInit, OnChanges {
 
   ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
-   
+
+    if (changes.eventfromshell) {
+      if (!changes.eventfromshell.firstChange)
+        this.evenFromShellData = changes.eventfromshell.currentValue;
+    }
+
   }
   ngOnInit(): void {
 
   }
   title = 'app-dashboard';
+
+  evenFromShellData: any = null;
 
   @Input()
   content: any;
@@ -38,13 +45,13 @@ export class AppComponentTax implements OnInit, OnChanges {
     this.ShellEvent.emit({
       eventType: "modal",
       eventData: {
-        alertType: "success",
-        message: "Hello from dashboard app"
+        modalTitle: "Dashboard",
+        modalBody: "Hello from dashboard app"
       }
     });
   }
 
-  sendNotification(){
+  sendNotification() {
     this.ShellEvent.emit({
       eventType: "notification",
       eventData: {

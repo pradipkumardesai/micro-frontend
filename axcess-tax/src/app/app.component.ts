@@ -8,12 +8,19 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class AppComponentTax {
  
   ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
-   
+
+    if (changes.eventfromshell) {
+      if (!changes.eventfromshell.firstChange)
+        this.evenFromShellData = changes.eventfromshell.currentValue;
+    }
+
   }
   ngOnInit(): void {
 
   }
-  title = 'app-tax';
+  title = 'app-Tax';
+
+  evenFromShellData: any = null;
 
   @Input()
   content: any;
@@ -29,7 +36,7 @@ export class AppComponentTax {
       eventType: "alert",
       eventData: {
         alertType: "success",
-        message: "Hello from dashboard app"
+        message: "Hello from Tax"
       }
     });
   }
@@ -38,18 +45,18 @@ export class AppComponentTax {
     this.ShellEvent.emit({
       eventType: "modal",
       eventData: {
-        alertType: "success",
-        message: "Hello from dashboard app"
+        modalTitle: "Tax",
+        modalBody: "Hello from Tax"
       }
     });
   }
 
-  sendNotification(){
+  sendNotification() {
     this.ShellEvent.emit({
       eventType: "notification",
       eventData: {
         senderAppName: "Tax",
-        notificationText: "Hello from dashboard app"
+        notificationText: "Hello from Tax"
       }
     });
   }

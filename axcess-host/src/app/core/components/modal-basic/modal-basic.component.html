@@ -1,18 +1,12 @@
 <div>
   <ng-template #content let-ca="close('a')" let-cb="close('b')" let-d="dismiss()">
     <div class="modal-header">
-      <h4 class="modal-title">Modal title</h4>
+      <h4 class="modal-title">{{modalData.modalTitle}}</h4>
       <span class="commonglyphs commonglyphs-close pull-right modal-close" aria-label="Close"
         (click)="ca"></span>
     </div>
     <div class="modal-body">
-      <p>Lorem Ipsum text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius
-        facilisis
-        eros. Sed erat. In in velit quis arcu ornare laoreet. Curabitur adipiscing luctus massa. Integer ut
-        purus
-        ac augue commodo commodo. Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl. In dignissim
-        lacus
-        ut ante.&hellip;</p>
+      <p>{{modalData.modalBody}}</p>
     </div>
     <div class="modal-footer">
       <button class="btn btn-secondary" type="button" (click)="ca">No</button>

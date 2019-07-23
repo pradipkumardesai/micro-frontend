@@ -20,7 +20,7 @@ export class ElementEventSubscriberService {
         this.notificationService.push({ senderAppName: event.eventData.senderAppName, notificationText: event.eventData.notificationText })
         break;
       case "modal":
-        this.modalBasicService.open();
+        this.modalBasicService.open({ modalTitle:event.eventData.modalTitle, modalBody:event.eventData.modalBody});
         break;
       default:
         break;

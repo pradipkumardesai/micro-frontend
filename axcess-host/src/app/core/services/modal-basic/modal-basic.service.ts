@@ -1,26 +1,25 @@
 import { Injectable } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subject } from 'rxjs';
+import { ModalBasic } from '../../models/modal-basic.model';
+import { ElementEventPublisherService } from '../element-event-publisher/element-event-publisher.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ModalBasicService {
 
-  modalStatus:Subject<boolean>=new Subject<boolean>();
+  modalStatus: Subject<boolean> = new Subject<boolean>();
+  modalData: ModalBasic = new ModalBasic();
 
-  constructor(private modalService: NgbModal) { 
+  constructor(private elementEventPublisherService: ElementEventPublisherService) { }
 
-
-  }
-
-  open(){
-   
+  open(modalData: ModalBasic) {
+    this.modalData = modalData;
     this.modalStatus.next(true);
   }
 
-  close(){
-   
+  close(result:string) {
+    this.elementEventPublisherService.sendEvent({ eventName: "modalClosed", eventData: result });
     this.modalStatus.next(false);
   }
 
